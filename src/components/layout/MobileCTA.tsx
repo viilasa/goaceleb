@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import './MobileCTA.css';
 
-const HIDDEN_ON = ['/plan/build', '/book', '/contact'];
+const HIDDEN_ON = ['/plan/build', '/book'];
 
 export function MobileCTA() {
   const { pathname } = useLocation();

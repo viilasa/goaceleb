@@ -23,8 +23,7 @@ export function Footer() {
           <h4>Company</h4>
           <Link to="/about">About</Link>
           <Link to="/journal">Journal</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/book">Book a Consultation</Link>
+          <Link to="/book">Get in Touch</Link>
         </div>
 
         <div className="footer-col">

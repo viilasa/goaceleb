@@ -10,7 +10,6 @@ const links = [
   { to: '/plan/build', label: 'Plan Your Wedding' },
   { to: '/about', label: 'About' },
   { to: '/journal', label: 'Journal' },
-  { to: '/contact', label: 'Contact' },
 ];
 
 export function Header() {

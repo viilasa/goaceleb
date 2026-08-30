@@ -11,7 +11,7 @@ export function Layout() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const hideSticky = pathname.startsWith('/plan') || pathname.startsWith('/book') || pathname === '/contact';
+  const hideSticky = pathname.startsWith('/plan') || pathname.startsWith('/book');
 
   return (
     <>

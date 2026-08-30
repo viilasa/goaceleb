@@ -4,7 +4,6 @@ import { CelebrationProvider } from './context/CelebrationContext';
 import { About } from './pages/About';
 import { BookConsultation } from './pages/BookConsultation';
 import { BuildCelebration } from './pages/BuildCelebration';
-import { Contact } from './pages/Contact';
 import { Home } from './pages/Home';
 import { Journal } from './pages/Journal';
 import { JournalArticle } from './pages/JournalArticle';
@@ -29,7 +28,7 @@ export default function App() {
             <Route path="about" element={<About />} />
             <Route path="journal" element={<Journal />} />
             <Route path="journal/:slug" element={<JournalArticle />} />
-            <Route path="contact" element={<Contact />} />
+            <Route path="contact" element={<Navigate to="/book?mode=enquiry" replace />} />
             <Route path="book" element={<BookConsultation />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
