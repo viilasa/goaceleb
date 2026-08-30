@@ -1,0 +1,87 @@
+.weddings-page .filter-bar {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.weddings-page .filter-bar::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-chip {
+  flex-shrink: 0;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  border: 1px solid var(--color-border);
+  min-height: 44px;
+  white-space: nowrap;
+}
+
+.filter-chip.is-active {
+  border-color: var(--color-text);
+  background: var(--color-text);
+  color: #fff;
+}
+
+.wedding-portfolio {
+  display: grid;
+  gap: var(--space-7);
+  padding-bottom: var(--space-8);
+}
+
+.portfolio-image {
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  margin-bottom: var(--space-4);
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s var(--ease);
+}
+
+.portfolio-item a:hover .portfolio-image img {
+  transform: scale(1.03);
+}
+
+.portfolio-meta h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.35rem;
+}
+
+.portfolio-meta p {
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+  margin-bottom: var(--space-3);
+}
+
+@media (min-width: 768px) {
+  .wedding-portfolio {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8) var(--space-5);
+  }
+
+  .portfolio-item.is-wide {
+    grid-column: 1 / -1;
+  }
+
+  .portfolio-item.is-wide .portfolio-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .portfolio-item:not(.is-wide):nth-child(even) .portfolio-image {
+    aspect-ratio: 3 / 4;
+  }
+
+  .portfolio-item:not(.is-wide):nth-child(odd) .portfolio-image {
+    aspect-ratio: 4 / 3;
+  }
+}

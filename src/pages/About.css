@@ -1,0 +1,51 @@
+.about-visual {
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  margin-bottom: var(--space-4);
+}
+
+.about-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-copy h2 {
+  margin-bottom: var(--space-5);
+  max-width: 12ch;
+}
+
+.about-copy p {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+  max-width: 40rem;
+}
+
+.about-values {
+  background: var(--color-surface);
+}
+
+.values-grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.values-grid h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-2);
+}
+
+.values-grid p {
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 768px) {
+  .values-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-7);
+  }
+
+  .about-visual {
+    aspect-ratio: 21 / 9;
+  }
+}

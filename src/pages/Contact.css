@@ -1,0 +1,11 @@
+.contact-form {
+  padding-bottom: var(--space-9);
+}
+
+.contact-success {
+  padding-block: var(--space-9);
+}
+
+.contact-success h1 {
+  margin-top: var(--space-3);
+}

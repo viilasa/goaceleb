@@ -1,0 +1,66 @@
+.selectable {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  width: 100%;
+  text-align: left;
+  padding: 1.1rem 1rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg);
+  transition:
+    border-color var(--duration) var(--ease),
+    background var(--duration) var(--ease);
+  min-height: 56px;
+}
+
+.selectable:hover {
+  border-color: var(--color-text-soft);
+}
+
+.selectable.is-selected {
+  border-color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.selectable-indicator {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: grid;
+  place-items: center;
+  font-size: 0.7rem;
+  margin-top: 0.15rem;
+  color: var(--color-accent);
+}
+
+.selectable-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.selectable-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.selectable-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.selectable-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+@media (min-width: 640px) {
+  .selectable-grid.cols-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .selectable-grid.cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
