@@ -1,36 +1,66 @@
 .progress-steps {
-  margin-bottom: var(--space-7);
+  margin-bottom: var(--space-5);
 }
 
 .progress-list {
   display: none;
 }
 
-.progress-bar {
-  height: 1px;
+.progress-mobile-ui {
+  display: block;
+}
+
+.progress-dots {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.progress-dot {
+  flex: 1;
+  height: 3px;
   background: var(--color-border);
-  position: relative;
-  margin-bottom: var(--space-3);
+  transition: background 0.35s var(--ease);
+}
+
+.progress-dot.is-done,
+.progress-dot.is-active {
+  background: var(--color-accent);
+}
+
+.progress-bar {
+  display: none;
 }
 
 .progress-fill {
-  position: absolute;
-  left: 0;
-  top: 0;
   height: 100%;
   background: var(--color-accent);
   transition: width 0.5s var(--ease);
 }
 
 .progress-mobile {
-  font-size: 0.8rem;
-  letter-spacing: 0.06em;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.progress-mobile span:last-child {
+  color: var(--color-text);
+  letter-spacing: 0.04em;
 }
 
 @media (min-width: 900px) {
-  .progress-mobile {
+  .progress-steps {
+    margin-bottom: var(--space-7);
+  }
+
+  .progress-mobile-ui {
     display: none;
   }
 

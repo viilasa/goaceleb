@@ -6,6 +6,9 @@ interface ProgressStepsProps {
 }
 
 export function ProgressSteps({ current }: ProgressStepsProps) {
+  const total = CALCULATOR_STEPS.length;
+  const label = CALCULATOR_STEPS[current - 1]?.label ?? '';
+
   return (
     <div className="progress-steps" role="navigation" aria-label="Celebration builder progress">
       <ol className="progress-list">
@@ -24,16 +27,29 @@ export function ProgressSteps({ current }: ProgressStepsProps) {
           );
         })}
       </ol>
-      <div className="progress-bar" aria-hidden>
-        <div
-          className="progress-fill"
-          style={{ width: `${((current - 1) / (CALCULATOR_STEPS.length - 1)) * 100}%` }}
-        />
+
+      <div className="progress-mobile-ui">
+        <div className="progress-dots" aria-hidden>
+          {CALCULATOR_STEPS.map((step) => (
+            <span
+              key={step.id}
+              className={`progress-dot ${step.id < current ? 'is-done' : ''} ${step.id === current ? 'is-active' : ''}`}
+            />
+          ))}
+        </div>
+        <div className="progress-bar" aria-hidden>
+          <div
+            className="progress-fill"
+            style={{ width: `${((current - 1) / (total - 1)) * 100}%` }}
+          />
+        </div>
+        <p className="progress-mobile">
+          <span>
+            {String(current).padStart(2, '0')} / {String(total).padStart(2, '0')}
+          </span>
+          <span>{label}</span>
+        </p>
       </div>
-      <p className="progress-mobile">
-        Step {String(current).padStart(2, '0')} of {String(CALCULATOR_STEPS.length).padStart(2, '0')} —{' '}
-        {CALCULATOR_STEPS[current - 1]?.label}
-      </p>
     </div>
   );
 }

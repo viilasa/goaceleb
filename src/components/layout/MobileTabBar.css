@@ -1,0 +1,81 @@
+.mobile-tab-bar {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-tab-bar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 95;
+    height: calc(3.6rem + env(safe-area-inset-bottom));
+    padding: 0.35rem 0.25rem calc(0.35rem + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.15rem;
+    min-height: 44px;
+    color: var(--color-text-soft);
+    font-size: 0.62rem;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .tab-item.is-active {
+    color: var(--color-text);
+  }
+
+  .tab-item.is-accent.is-active,
+  .tab-item.is-accent:active {
+    color: var(--color-accent);
+  }
+
+  .tab-icon {
+    display: grid;
+    place-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .tab-item.is-accent .tab-icon {
+    width: 2.1rem;
+    height: 2.1rem;
+    border: 1px solid var(--color-accent);
+    color: var(--color-accent);
+  }
+
+  .tab-item.is-accent.is-active .tab-icon {
+    background: var(--color-accent);
+    color: #fff;
+  }
+
+  /* Space for tab bar */
+  .has-mobile-tabs {
+    padding-bottom: calc(4.25rem + env(safe-area-inset-bottom));
+  }
+
+  body.is-app-flow .mobile-tab-bar {
+    display: none;
+  }
+
+  body.is-app-flow .site-header,
+  body.is-app-flow .site-footer {
+    display: none !important;
+  }
+
+  body.is-app-flow .page {
+    padding-top: 0;
+    min-height: 100dvh;
+  }
+}

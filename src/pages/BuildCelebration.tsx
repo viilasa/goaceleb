@@ -1,4 +1,4 @@
-import { useEffect, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { ProgressSteps } from '../components/ui/ProgressSteps';
@@ -6,6 +6,7 @@ import { SelectableOption } from '../components/ui/SelectableOption';
 import { useCelebration } from '../context/CelebrationContext';
 import {
   ACCOMMODATION_OPTIONS,
+  CALCULATOR_STEPS,
   DAY_OPTIONS,
   DECOR_LEVELS,
   DECOR_STYLES,
@@ -57,12 +58,18 @@ export function BuildCelebration() {
     setLeadId,
   } = useCelebration();
   const [leadSubmitted, setLeadSubmitted] = useState(false);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const pkg = searchParams.get('package');
     if (pkg) updateSelections({ packagePreference: pkg });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams]);
+
+  useEffect(() => {
+    scrollRef.current?.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [step]);
 
   const canContinue = (): boolean => {
     switch (step) {
@@ -118,7 +125,24 @@ export function BuildCelebration() {
 
   return (
     <div className="page build-page">
-      <header className="page-header container-wide">
+      <header className="build-app-bar">
+        <Link to="/" className="build-app-close" aria-label="Close planner">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <path d="M6 6l12 12M18 6 6 18" />
+          </svg>
+        </Link>
+        <div className="build-app-bar-copy">
+          <p className="build-app-kicker">Plan Your Wedding</p>
+          <h1 className="build-app-title">
+            {CALCULATOR_STEPS[step - 1]?.label ?? 'Build Your Celebration'}
+          </h1>
+        </div>
+        <span className="build-app-step">
+          {step}/{CALCULATOR_STEPS.length}
+        </span>
+      </header>
+
+      <header className="page-header container-wide build-desktop-header">
         <p className="eyebrow">Plan Your Wedding</p>
         <h1>Build Your Celebration</h1>
         <p className="lede">
@@ -128,9 +152,12 @@ export function BuildCelebration() {
       </header>
 
       <div className="container build-shell">
-        <ProgressSteps current={step} />
+        <div className="build-app-progress">
+          <ProgressSteps current={step} />
+        </div>
 
-        <div className="build-panel" key={step}>
+        <div className="build-scroll" ref={scrollRef}>
+          <div className="build-panel" key={step}>
           {step === 1 && (
             <section>
               <h2 className="step-title">Your Celebration</h2>
@@ -583,8 +610,8 @@ export function BuildCelebration() {
                     <Button to="/book" variant="primary">
                       Book a Consultation
                     </Button>
-                    <Button to="/weddings" variant="secondary">
-                      Explore Weddings
+                    <Button to="/" variant="secondary">
+                      Back to Home
                     </Button>
                   </div>
                 </div>
@@ -592,17 +619,20 @@ export function BuildCelebration() {
             </section>
           )}
         </div>
+        </div>
 
         {step < 7 && (
           <div className="build-nav">
             {step > 1 ? (
-              <button type="button" className="btn btn-ghost" onClick={back}>
-                ← Back
+              <button type="button" className="btn btn-ghost build-nav-back" onClick={back}>
+                Back
               </button>
             ) : (
-              <span />
+              <Link to="/" className="btn btn-ghost build-nav-back">
+                Close
+              </Link>
             )}
-            <Button variant="primary" onClick={next} disabled={!canContinue()}>
+            <Button variant="primary" className="build-nav-continue" onClick={next} disabled={!canContinue()}>
               Continue
             </Button>
           </div>
@@ -610,12 +640,12 @@ export function BuildCelebration() {
 
         {step === 7 && (
           <div className="build-nav">
-            <button type="button" className="btn btn-ghost" onClick={back}>
-              ← Edit selections
+            <button type="button" className="btn btn-ghost build-nav-back" onClick={back}>
+              Edit
             </button>
-            <Link to="/" className="btn btn-ghost">
-              Home
-            </Link>
+            <Button to="/book" variant="primary" className="build-nav-continue">
+              Book a Call
+            </Button>
           </div>
         )}
       </div>
