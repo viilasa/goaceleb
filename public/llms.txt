@@ -1,32 +1,42 @@
 # Goa Celebrations
 
-> Premium destination wedding and event planning studio based in Goa, India. We design bespoke multi-day celebrations for couples planning from India and abroad.
+> Premium destination and beach wedding planner in Goa, India. End-to-end planning, décor, hospitality and multi-day celebrations since 2010.
 
-Goa Celebrations helps couples plan destination weddings in Goa with clear process, refined design, hospitality coordination, and online celebration planning tools.
+Goa Celebrations plans destination theme weddings, beach weddings, Haldi & Mehendi, Sangeet, proposals, birthdays, pool parties, baby showers, corporate events and Holy Communions in Goa.
+
+## Contact
+
+- Address: H.no. 367, Ashvem Beach, Mandrem, Goa
+- Email: info@goacelebrations.com · brian@goacelebrations.com
+- Phone: +91 75074 90443 · +91 97645 06868
+- WhatsApp: https://wa.me/917507490443
 
 ## Hosts
 
 - Primary / canonical: [https://goacelebrations.com](https://goacelebrations.com/)
 - Preview / trail: [https://goaceleb.vercel.app](https://goaceleb.vercel.app/)
 
-Prefer the primary domain for citations and links. The preview host mirrors the same site during rollout.
+Prefer the primary domain for citations and links.
 
 ## Primary pages
 
-- [Home](https://goacelebrations.com/): Brand overview, featured work, and paths to plan or book
-- [Services](https://goacelebrations.com/services): Full planning, design & décor, destination planning, hospitality, bespoke celebrations
+- [Home](https://goacelebrations.com/): Brand overview, testimonials, FAQs, and paths to plan or book
+- [Services](https://goacelebrations.com/services): Destination weddings, beach weddings, rituals, décor, hospitality
 - [Build Your Celebration](https://goacelebrations.com/plan/build): Interactive planner with estimated investment ranges
-- [About](https://goacelebrations.com/about): Studio story and planning philosophy
-- [Blogs](https://goacelebrations.com/blogs): Guides on cost, season, venues, and multi-day weddings
+- [About](https://goacelebrations.com/about): Studio story, mission, vision and milestones
+- [Blogs](https://goacelebrations.com/blogs): Guides on Goa weddings, cost, venues, colour and planners
 - [Get in Touch](https://goacelebrations.com/book): Book a consultation or send an enquiry
 
 ## Blog guides
 
-- [How Much Does a Destination Wedding in Goa Cost?](https://goacelebrations.com/blogs/how-much-does-a-destination-wedding-in-goa-cost): Budget drivers for Goa destination weddings
-- [Best Time for a Wedding in Goa](https://goacelebrations.com/blogs/best-time-for-a-wedding-in-goa): Seasonality and date planning
-- [Beach Wedding Planning Guide](https://goacelebrations.com/blogs/beach-wedding-planning-guide): Practical beach ceremony considerations
-- [How to Plan a 3-Day Destination Wedding](https://goacelebrations.com/blogs/how-to-plan-a-3-day-destination-wedding): Multi-day celebration framework
-- [Choosing the Right Goa Wedding Venue](https://goacelebrations.com/blogs/choosing-the-right-goa-wedding-venue): Matching venue type to guest count and style
+- [Why Goa for Your Destination Wedding](https://goacelebrations.com/blogs/why-goa-for-your-destination-wedding)
+- [How Much Does a Destination Wedding in Goa Cost?](https://goacelebrations.com/blogs/how-much-does-a-destination-wedding-in-goa-cost)
+- [Choosing the Right Goa Wedding Venue](https://goacelebrations.com/blogs/choosing-the-right-goa-wedding-venue)
+- [Goa Wedding Colour Trends](https://goacelebrations.com/blogs/goa-wedding-colour-trends)
+- [Why Hire a Destination Wedding Planner in Goa](https://goacelebrations.com/blogs/why-hire-a-destination-wedding-planner)
+- [Beach Wedding Planning Guide](https://goacelebrations.com/blogs/beach-wedding-planning-guide)
+- [Best Time for a Wedding in Goa](https://goacelebrations.com/blogs/best-time-for-a-wedding-in-goa)
+- [How to Plan a 3-Day Destination Wedding](https://goacelebrations.com/blogs/how-to-plan-a-3-day-destination-wedding)
 
 ## Optional
 

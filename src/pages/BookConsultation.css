@@ -30,6 +30,10 @@
     display: none;
   }
 
+  .book-page .page-header .book-direct-contact {
+    display: none;
+  }
+
   .book-shell {
     padding: 1rem 1.15rem calc(6rem + env(safe-area-inset-bottom));
     width: 100%;
@@ -219,4 +223,23 @@
   color: var(--color-text-muted);
   margin-bottom: var(--space-5);
   margin-top: -0.75rem;
+}
+
+.book-direct-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+  margin-top: var(--space-4);
+  font-size: 0.95rem;
+}
+
+.book-direct-contact a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.book-direct-contact span {
+  color: var(--color-text-muted);
 }

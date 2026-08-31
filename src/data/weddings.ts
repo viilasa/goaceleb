@@ -9,19 +9,20 @@ export const weddings: WeddingStory[] = [
     id: '1',
     slug: 'celebration-by-the-sea',
     name: 'A Celebration by the Sea',
-    location: 'South Goa',
+    location: 'La Cabana Beach & Spa, Goa',
     days: 3,
     guestCount: 180,
-    tags: ['Beach', 'Multi-Day', 'Destination'],
-    shortDescription: 'Three days of coastal light, intimate gatherings and a ceremony by the water.',
+    tags: ['Beach', 'Multi-Day', 'Destination', 'Resort'],
+    shortDescription:
+      'Three days at La Cabana Beach & Spa — coastal light, intimate gatherings and a ceremony by the water.',
     introduction:
-      'Set along a quiet stretch of South Goa, this celebration unfolded over three days — from a soft welcome dinner to a seaside ceremony and an evening of music under open skies.',
+      'Set at La Cabana Beach & Spa, this celebration unfolded over three days — from a soft welcome dinner to a seaside ceremony and an evening of music under open skies.',
     coverImage:
       'https://images.unsplash.com/photo-1519741497674-611481863552?w=1600&q=80',
     featured: true,
     featuredSize: 'large',
     details:
-      'The couple chose a refined beachfront resort as their home base, hosting family and friends across connected spaces that moved from garden lawns to the shoreline.',
+      'The couple chose La Cabana Beach & Spa as their home base, hosting family and friends across connected spaces that moved from garden lawns to the shoreline.',
     decorMoments:
       'Soft whites, tropical greens and natural textures shaped each event. Ceremony florals framed the ocean view without competing with it.',
     guestExperience:

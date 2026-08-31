@@ -10,7 +10,8 @@ export function Services() {
         <p className="eyebrow">Expertise</p>
         <h1>Services</h1>
         <p className="lede">
-          Planning, design and hospitality — shaped around destination celebrations in Goa.
+          Destination theme weddings, beach ceremonies, Haldi &amp; Mehendi, Sangeet, proposals and
+          private celebrations — planned end to end in Goa.
         </p>
       </header>
 

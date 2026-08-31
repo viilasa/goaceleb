@@ -7,4 +7,6 @@ Allow: /
 llms-txt: /llms.txt
 llms-full-txt: /llms-full.txt
 Sitemap: /sitemap.xml
-Contact: hello@goacelebrations.com
+Contact: info@goacelebrations.com
+Phone: +91 75074 90443
+Address: H.no. 367, Ashvem Beach, Mandrem, Goa

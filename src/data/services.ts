@@ -1,69 +1,117 @@
 import type { Service } from '../lib/types';
 
+/** Services adapted from Goa Celebrations content inventory — editorial tone. */
 export const services: Service[] = [
   {
     id: '1',
-    title: 'Full Wedding Planning',
-    slug: 'full-wedding-planning',
-    summary: 'From the first conversation to the final celebration.',
+    title: 'Destination Theme Weddings',
+    slug: 'destination-theme-weddings',
+    summary: 'Custom theme weddings tailored to your vision across Goa.',
     description:
-      'End-to-end planning for destination weddings in Goa — timelines, vendor coordination, design direction, guest hospitality and on-ground execution. We stay with you from the first conversation through the last farewell.',
+      'End-to-end destination wedding planning — venue shortlists, scenic locations, creative décor, coordination and a calm, stress-free process from the first conversation to the final celebration.',
     image:
       'https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&q=80',
   },
   {
     id: '2',
-    title: 'Wedding Design & Décor',
-    slug: 'wedding-design-decor',
-    summary: 'Concept, styling and visual direction.',
+    title: 'Beach Weddings',
+    slug: 'beach-weddings',
+    summary: 'Seaside ceremonies with elegant décor and professional execution.',
     description:
-      'A clear design language for your celebration — mood, colour, florals, lighting and spatial storytelling. We create cohesive visual experiences across every event and space.',
-    image:
-      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1400&q=80',
-  },
-  {
-    id: '3',
-    title: 'Destination Wedding Planning',
-    slug: 'destination-wedding-planning',
-    summary: 'For couples planning a Goa wedding from another city or country.',
-    description:
-      'Remote-friendly planning with clear communication, curated venue shortlists, travel coordination and local expertise — so distance never gets in the way of a beautifully planned celebration.',
+      'Specialist beach wedding planning in Goa — beautiful shoreline venues, refined beach décor, experienced on-ground teams and customised planning for intimate or larger celebrations.',
     image:
       'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&q=80',
   },
   {
-    id: '4',
-    title: 'Hospitality & Guest Experience',
-    slug: 'hospitality-guest-experience',
-    summary: 'Accommodation, arrivals, transport and guest coordination.',
+    id: '3',
+    title: 'Haldi & Mehendi',
+    slug: 'haldi-mehendi',
+    summary: 'Vibrant pre-wedding rituals designed for destination celebrations.',
     description:
-      'Room blocks, airport transfers, welcome desks, guest communication and on-ground hospitality teams. We design the guest journey with the same care as the celebration itself.',
+      'Culturally rich Haldi and Mehendi experiences with elegant setups, quality styling, personalised service and seamless integration into your multi-day Goa wedding.',
+    image:
+      'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1400&q=80',
+  },
+  {
+    id: '4',
+    title: 'Sangeet',
+    slug: 'sangeet',
+    summary: 'Themed décor, entertainment and end-to-end coordination.',
+    description:
+      'A lively, personalised Sangeet with thematic décor, choreography support, entertainment options and comprehensive planning so the night feels effortless and memorable.',
+    image:
+      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1400&q=80',
+  },
+  {
+    id: '5',
+    title: 'Proposals',
+    slug: 'proposals',
+    summary: 'Scenic, personalised proposal planning — especially by the sea.',
+    description:
+      'Intimate proposal experiences in scenic and beachside settings, with coordinated execution, personalised themes and photography so the moment feels considered and calm.',
+    image:
+      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=1400&q=80',
+  },
+  {
+    id: '6',
+    title: 'Hospitality & Guest Logistics',
+    slug: 'hospitality-guest-logistics',
+    summary: 'Accommodation, transport and guest itineraries.',
+    description:
+      'Guest management for destination weddings — room coordination, transportation, welcome support and clear itineraries so everyone feels looked after from arrival to farewell.',
     image:
       'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1400&q=80',
   },
   {
-    id: '5',
-    title: 'Bespoke Celebrations',
-    slug: 'bespoke-celebrations',
-    summary: 'Completely customised celebrations.',
+    id: '7',
+    title: 'Celebrations & Private Events',
+    slug: 'celebrations-private-events',
+    summary: 'Birthdays, pool parties, baby showers and corporate gatherings.',
     description:
-      'Anniversaries, vow renewals, private gatherings and one-of-a-kind events — designed around your story, your people and the way you want to celebrate in Goa.',
+      'Beyond weddings — themed birthday celebrations, poolside events, baby showers, corporate gatherings and Holy Communions planned with the same care for venue, décor and guest experience.',
     image:
-      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1400&q=80',
+      'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=1400&q=80',
+  },
+  {
+    id: '8',
+    title: 'Décor & Design',
+    slug: 'decor-design',
+    summary: 'Stage, entrance, ceremony and thematic décor direction.',
+    description:
+      'Creative décor for stages, entrances, baraat moments, food spaces, bride entrances and full ceremony styling — designed to feel cohesive across every event in your celebration.',
+    image:
+      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1400&q=80',
   },
 ];
 
 export const homeServicePreview = [
-  'Full Wedding Planning',
-  'Wedding Design & Décor',
-  'Destination Weddings',
-  'Hospitality & Guest Management',
-  'Bespoke Celebrations',
+  'Destination Theme Weddings',
+  'Beach Weddings',
+  'Haldi & Mehendi',
+  'Sangeet',
+  'Hospitality & Guest Logistics',
+  'Décor & Design',
 ];
 
 export const coreAreas = [
-  { number: '01', title: 'Planning', description: 'Clear timelines, thoughtful coordination and calm execution.' },
-  { number: '02', title: 'Design', description: 'Visual direction that feels intentional, refined and personal.' },
-  { number: '03', title: 'Hospitality', description: 'Guest care that makes every arrival feel considered.' },
-  { number: '04', title: 'Celebration', description: 'Moments shaped around your story, not a template.' },
+  {
+    number: '01',
+    title: 'Planning',
+    description: 'Venue selection, timelines, vendor coordination and calm end-to-end execution.',
+  },
+  {
+    number: '02',
+    title: 'Design',
+    description: 'Themes, décor and visual direction shaped around beach and destination settings.',
+  },
+  {
+    number: '03',
+    title: 'Hospitality',
+    description: 'Guest accommodation, transport and itineraries managed with care.',
+  },
+  {
+    number: '04',
+    title: 'Celebration',
+    description: 'From Haldi and Sangeet to ceremony and reception — moments that feel personal.',
+  },
 ];

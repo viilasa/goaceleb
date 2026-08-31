@@ -1,7 +1,8 @@
 /* TEAM */
 Studio: Goa Celebrations
-Location: Goa, India
-Contact: hello@goacelebrations.com
+Location: H.no. 367, Ashvem Beach, Mandrem, Goa
+Contact: info@goacelebrations.com
+Phone: +91 75074 90443 / +91 97645 06868
 
 /* SITE */
 Standards: HTML5, CSS3, ES modules

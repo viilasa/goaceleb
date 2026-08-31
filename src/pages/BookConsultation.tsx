@@ -2,6 +2,7 @@ import { useMemo, useState, type FormEvent } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { SelectableOption } from '../components/ui/SelectableOption';
+import { SITE } from '../config/site';
 import { useCelebration } from '../context/CelebrationContext';
 import {
   consultationTypes,
@@ -256,7 +257,17 @@ export function BookConsultation() {
         <p className="eyebrow">Let&apos;s Talk</p>
         <h1>Get in Touch</h1>
         <p className="lede">
-          Book a consultation or send a short enquiry — whichever feels right to begin.
+          Book a consultation or send a short enquiry — whichever feels right to begin. You can also
+          reach us at {SITE.address.full}.
+        </p>
+        <p className="book-direct-contact">
+          <a href={`tel:${SITE.phoneTel}`}>{SITE.phone}</a>
+          <span aria-hidden>·</span>
+          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          <span aria-hidden>·</span>
+          <a href={SITE.whatsapp} target="_blank" rel="noreferrer">
+            WhatsApp
+          </a>
         </p>
       </header>
 

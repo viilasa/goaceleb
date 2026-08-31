@@ -25,7 +25,7 @@
   --space-9: 6rem;
   --space-10: 8rem;
 
-  --nav-height: 3.75rem;
+  --nav-height: 4.25rem;
   --page-gutter: 1.25rem;
   --container: min(1280px, calc(100% - (var(--page-gutter) * 2)));
   --container-wide: min(1280px, calc(100% - (var(--page-gutter) * 2)));

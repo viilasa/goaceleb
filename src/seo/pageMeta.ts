@@ -24,24 +24,22 @@ export function titleWithBrand(pageTitle: string): string {
 }
 
 export const defaultSeo: PageSeo = {
-  title: `${brand} | Destination Weddings in Goa`,
-  description:
-    'Plan a premium destination wedding in Goa with Goa Celebrations — bespoke planning, design, hospitality and multi-day celebrations crafted around your story.',
+  title: `${brand} | Premium Destination Wedding Planner in Goa`,
+  description: SITE.description,
   path: '/',
   type: 'website',
 };
 
 export const routeSeo: Record<string, PageSeo> = {
   '/': {
-    title: `${brand} | Destination Weddings in Goa`,
-    description:
-      'Plan a premium destination wedding in Goa with Goa Celebrations — bespoke planning, design, hospitality and multi-day celebrations crafted around your story.',
+    title: `${brand} | Premium Destination Wedding Planner in Goa`,
+    description: SITE.description,
     path: '/',
   },
   '/services': {
     title: 'Wedding Planning Services in Goa',
     description:
-      'From full wedding planning to design, destination coordination and guest hospitality — explore how Goa Celebrations brings celebrations to life in Goa.',
+      'Destination theme weddings, beach ceremonies, Haldi & Mehendi, Sangeet, proposals, décor and guest hospitality — planned by Goa Celebrations.',
     path: '/services',
   },
   '/plan/build': {
@@ -53,25 +51,25 @@ export const routeSeo: Record<string, PageSeo> = {
   '/about': {
     title: 'About Goa Celebrations',
     description:
-      'Goa Celebrations is a premium destination wedding studio in Goa — calm process, refined design, and celebrations planned around your story.',
+      'Goa Celebrations has planned destination and beach weddings in Goa since 2010 — based at Ashvem Beach, Mandrem, with 1000+ events managed.',
     path: '/about',
   },
   '/blogs': {
     title: 'Wedding Planning Blogs & Guides',
     description:
-      'Expert guides on Goa wedding costs, best seasons, beach ceremonies, venues and how to plan a seamless 3-day destination celebration.',
+      'Guides on why choose Goa, wedding costs, venues, colour trends, beach planning and hiring a destination wedding planner.',
     path: '/blogs',
   },
   '/book': {
     title: 'Book a Consultation | Goa Celebrations',
     description:
-      'Book a complimentary discovery call or send an enquiry — start planning your destination wedding in Goa with the Goa Celebrations team.',
+      'Book a discovery call or send an enquiry — start planning your destination or beach wedding in Goa with Goa Celebrations.',
     path: '/book',
   },
   '/weddings': {
     title: 'Our Weddings — Destination Wedding Portfolio',
     description:
-      'Explore real Goa Celebrations weddings — beachfront ceremonies, villa weekends, and multi-day destination celebrations.',
+      'Explore Goa Celebrations weddings — including celebrations at La Cabana Beach & Spa and multi-day destination events across Goa.',
     path: '/weddings',
     noindex: true,
   },
@@ -117,6 +115,7 @@ export function organizationJsonLd() {
     logo: absoluteUrl('/favicon.svg'),
     address: {
       '@type': 'PostalAddress',
+      streetAddress: SITE.address.line1,
       addressLocality: SITE.address.locality,
       addressRegion: SITE.address.region,
       addressCountry: SITE.address.country,

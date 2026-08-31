@@ -29,10 +29,6 @@
   color: #fff;
 }
 
-.site-header.is-over-hero .brand-logo {
-  filter: brightness(0) invert(1);
-}
-
 .site-header-inner {
   width: var(--container-wide);
   margin-inline: auto;
@@ -47,17 +43,21 @@
   display: flex;
   align-items: center;
   z-index: 2;
+  line-height: 0;
 }
 
 .brand-logo {
-  height: 1.35rem;
+  height: 2.65rem;
   width: auto;
-  transition: filter var(--duration) var(--ease);
+  max-width: min(42vw, 9.5rem);
+  object-fit: contain;
+  display: block;
 }
 
 @media (min-width: 768px) {
   .brand-logo {
-    height: 1.55rem;
+    height: 3.1rem;
+    max-width: 11rem;
   }
 }
 

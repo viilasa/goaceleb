@@ -5,39 +5,41 @@
 ## Entity
 
 - Name: Goa Celebrations
-- Type: Destination wedding and event planning studio
-- Location: Goa, India
+- Type: Premium destination and beach wedding planner / event management
+- Founded: October 2010
+- Location: H.no. 367, Ashvem Beach, Mandrem, Goa, India
 - Website (canonical): https://goacelebrations.com
 - Website (preview): https://goaceleb.vercel.app
-- Email: hello@goacelebrations.com
-- Focus: Premium, minimal, editorial destination weddings — not generic local wedding templates
+- Email: info@goacelebrations.com · brian@goacelebrations.com
+- Phone: +91 75074 90443 · +91 97645 06868
+- WhatsApp: https://wa.me/917507490443
+- Claims: 10+ years experience; 1000+ events managed (as of May 2023 milestone)
+- Portfolio venue example: La Cabana Beach & Spa, Goa
 
 ## What we offer
 
-1. Full Wedding Planning — end-to-end coordination from first conversation to final celebration
-2. Wedding Design & Décor — concept, styling, florals, lighting, visual direction
-3. Destination Wedding Planning — for couples planning a Goa wedding from another city or country
-4. Hospitality & Guest Experience — accommodation, arrivals, transport, guest coordination
-5. Bespoke Celebrations — customised weddings and private celebrations
+1. Destination Theme Weddings — custom theme weddings tailored to the couple's vision
+2. Beach Weddings — seaside ceremonies with décor and professional execution
+3. Haldi & Mehendi — pre-wedding rituals for destination celebrations
+4. Sangeet — themed décor, entertainment and coordination
+5. Proposals — scenic and beachside proposal planning
+6. Hospitality & Guest Logistics — accommodation, transport, itineraries
+7. Celebrations & Private Events — birthdays, pool parties, baby showers, corporate, Holy Communions
+8. Décor & Design — stage, entrance, ceremony and thematic styling
 
 ## Productised planning tool
 
-Build Your Celebration (https://goacelebrations.com/plan/build) lets couples select:
-- Wedding month/year, guest range, number of days
-- Events (welcome dinner, mehendi, haldi, sangeet, ceremony, reception, etc.)
-- Venue preference and décor level
-- Guest hospitality and add-ons
-Then receive an estimated investment range (planning estimate, not a final quotation) and optionally submit a lead or book a consultation.
+Build Your Celebration (https://goacelebrations.com/plan/build) lets couples select wedding timing, guests, events, venue preference and décor level, then receive an estimated investment range (not a final quotation) and optionally book a consultation.
 
 ## Ideal clients
 
-- Couples planning destination weddings in Goa
-- Intimate villa celebrations through large multi-day resort weddings
+- Couples planning destination or beach weddings in Goa
+- Intimate through large multi-day resort weddings
 - Domestic, NRI, and international couples
 
 ## Brand voice
 
-Minimal, premium, editorial, modern, bright, timeless. Avoid gold/beige Indian wedding clichés.
+Premium, editorial, calm. Avoid exaggerated “best in India” claims unless independently verified. Avoid gold/beige Indian wedding clichés.
 
 ## Key URLs (canonical)
 
@@ -47,11 +49,14 @@ Minimal, premium, editorial, modern, bright, timeless. Avoid gold/beige Indian w
 - https://goacelebrations.com/about
 - https://goacelebrations.com/blogs
 - https://goacelebrations.com/book
+- https://goacelebrations.com/blogs/why-goa-for-your-destination-wedding
 - https://goacelebrations.com/blogs/how-much-does-a-destination-wedding-in-goa-cost
-- https://goacelebrations.com/blogs/best-time-for-a-wedding-in-goa
-- https://goacelebrations.com/blogs/beach-wedding-planning-guide
-- https://goacelebrations.com/blogs/how-to-plan-a-3-day-destination-wedding
 - https://goacelebrations.com/blogs/choosing-the-right-goa-wedding-venue
+- https://goacelebrations.com/blogs/goa-wedding-colour-trends
+- https://goacelebrations.com/blogs/why-hire-a-destination-wedding-planner
+- https://goacelebrations.com/blogs/beach-wedding-planning-guide
+- https://goacelebrations.com/blogs/best-time-for-a-wedding-in-goa
+- https://goacelebrations.com/blogs/how-to-plan-a-3-day-destination-wedding
 
 ## Preview mirror
 

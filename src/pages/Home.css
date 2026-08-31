@@ -251,12 +251,105 @@
   margin-bottom: var(--space-6);
 }
 
+.testimonials-section {
+  background: var(--color-surface);
+}
+
+.testimonials-grid {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.testimonial {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.testimonial-quote {
+  font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+  line-height: 1.65;
+  margin-bottom: var(--space-4);
+  max-width: 36rem;
+}
+
+.testimonial footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.testimonial cite {
+  font-style: normal;
+  font-weight: 600;
+}
+
+.testimonial footer span {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.faq-section h2 {
+  margin-bottom: var(--space-5);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-border);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-4) 0;
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding-right: 1.5rem;
+  position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--color-text-muted);
+}
+
+.faq-item[open] summary::after {
+  content: '–';
+}
+
+.faq-item p {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  max-width: 40rem;
+  line-height: 1.7;
+}
+
 .final-cta {
   text-align: left;
 }
 
 .final-cta h2 {
   max-width: 12ch;
+}
+
+@media (min-width: 768px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-7);
+  }
 }
 
 @media (min-width: 480px) {

@@ -1,5 +1,7 @@
 import { Button } from '../components/ui/Button';
 import { Reveal } from '../components/ui/Reveal';
+import { SITE } from '../config/site';
+import { aboutContent, milestones } from '../data/brand';
 import './About.css';
 
 export function About() {
@@ -8,10 +10,7 @@ export function About() {
       <header className="page-header container-wide">
         <p className="eyebrow">Our Studio</p>
         <h1>About Goa Celebrations</h1>
-        <p className="lede">
-          A premium destination wedding and event planning brand based in Goa — known for calm
-          process, refined design and celebrations that feel personal.
-        </p>
+        <p className="lede">{aboutContent.headline}</p>
       </header>
 
       <div className="about-visual container-wide">
@@ -24,17 +23,10 @@ export function About() {
 
       <section className="section container about-copy">
         <Reveal>
-          <h2>We plan with intention.</h2>
-          <p>
-            Goa Celebrations was founded for couples who want their destination wedding to feel
-            considered — not crowded with clichés. We bring together planning, design and hospitality
-            so every detail supports the story you want to tell.
-          </p>
-          <p>
-            Whether you are planning from another city, another country, or already know your venue,
-            we guide you with clarity: timelines that make sense, design that feels timeless, and a
-            guest experience that feels cared for.
-          </p>
+          <h2>A destination wedding planner in Goa.</h2>
+          {aboutContent.story.map((paragraph) => (
+            <p key={paragraph.slice(0, 32)}>{paragraph}</p>
+          ))}
         </Reveal>
       </section>
 
@@ -42,16 +34,16 @@ export function About() {
         <div className="container values-grid">
           {[
             {
-              title: 'Editorial design',
-              text: 'Visual direction that photographs beautifully and feels lived-in, not overdone.',
+              title: 'Mission',
+              text: aboutContent.mission,
             },
             {
-              title: 'Calm coordination',
-              text: 'A process designed to reduce overwhelm — for you and for your guests.',
+              title: 'Vision',
+              text: aboutContent.vision,
             },
             {
               title: 'Local fluency',
-              text: 'Deep knowledge of Goa venues, seasons, permissions and hospitality partners.',
+              text: 'Deep knowledge of Goa venues, seasons, permissions and hospitality partners — from Ashvem and Mandrem to resorts across the coast.',
             },
           ].map((item, i) => (
             <Reveal key={item.title} delay={i * 80}>
@@ -64,9 +56,36 @@ export function About() {
         </div>
       </section>
 
+      <section className="section container about-milestones">
+        <Reveal>
+          <p className="eyebrow">Milestones</p>
+          <h2>A decade of celebrations.</h2>
+        </Reveal>
+        <ol className="milestone-list">
+          {milestones.map((item, i) => (
+            <Reveal key={item.date} delay={i * 80}>
+              <li>
+                <span className="milestone-date">{item.date}</span>
+                <div>
+                  <h3>{item.label}</h3>
+                  <p>{item.detail}</p>
+                </div>
+              </li>
+            </Reveal>
+          ))}
+        </ol>
+        <p className="about-stats">
+          {SITE.claims.yearsExperience} years of experience · {SITE.claims.eventsManaged} events
+          managed
+        </p>
+      </section>
+
       <section className="section container">
         <Reveal>
           <h2>Ready when you are.</h2>
+          <p className="lede" style={{ marginTop: 'var(--space-3)' }}>
+            Visit us at {SITE.address.full}, or start a conversation online.
+          </p>
           <div className="btn-group" style={{ marginTop: 'var(--space-5)' }}>
             <Button to="/plan/build" variant="primary">
               Build Your Celebration

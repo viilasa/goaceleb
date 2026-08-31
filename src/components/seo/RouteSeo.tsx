@@ -1,5 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { Seo } from './Seo';
+import { faqs } from '../../data/brand';
 import { getArticleBySlug } from '../../data/journal';
 import { absoluteUrl, SITE } from '../../config/site';
 import {
@@ -81,32 +82,14 @@ export function RouteSeo() {
       ? {
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: [
-            {
-              '@type': 'Question',
-              name: 'What does Goa Celebrations do?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Goa Celebrations plans premium destination weddings and celebrations in Goa, including full planning, design & décor, hospitality, and bespoke events.',
-              },
+          mainEntity: faqs.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answer,
             },
-            {
-              '@type': 'Question',
-              name: 'Can I get a wedding budget estimate online?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Yes. Use Build Your Celebration to select guests, events, venue style, décor and add-ons, then receive an estimated investment range before booking a consultation.',
-              },
-            },
-            {
-              '@type': 'Question',
-              name: 'Do you plan weddings for couples outside Goa?',
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: 'Yes. Goa Celebrations specialises in destination weddings for couples planning from other Indian cities, as NRIs, or internationally.',
-              },
-            },
-          ],
+          })),
         }
       : null;
 

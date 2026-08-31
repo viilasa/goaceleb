@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { Button } from '../components/ui/Button';
 import { Reveal } from '../components/ui/Reveal';
+import { SITE } from '../config/site';
+import { faqs, testimonials } from '../data/brand';
 import { coreAreas, homeServicePreview } from '../data/services';
 import { getFeaturedWeddings } from '../data/weddings';
 import './Home.css';
@@ -28,8 +30,8 @@ export function Home() {
             <span className="display-line">Beautifully Planned.</span>
           </h1>
           <p>
-            Bespoke destination weddings and celebrations in Goa, thoughtfully designed around
-            your story.
+            Premium destination and beach wedding planning in Goa — crafted around your story,
+            with calm process and considered hospitality.
           </p>
           <div className="btn-group hero-actions">
             <Button to="/plan/build" variant="primary" className="hero-btn">
@@ -51,9 +53,9 @@ export function Home() {
               Your story is the celebration.
             </h2>
             <p className="lede intro-copy">
-              Goa Celebrations is a premium destination wedding and event planning studio. We design
-              celebrations that feel calm, considered and deeply personal — from intimate gatherings
-              to multi-day destination weddings.
+              Since {SITE.foundingYear}, Goa Celebrations has planned destination and beach weddings
+              across Goa — from Haldi and Mehendi to ceremony day — with design, coordination and
+              guest care that feel personal.
             </p>
           </Reveal>
 
@@ -143,6 +145,28 @@ export function Home() {
         </div>
       </section>
 
+      <section className="section testimonials-section">
+        <div className="container">
+          <Reveal>
+            <p className="eyebrow">Kind Words</p>
+            <h2>What couples say</h2>
+          </Reveal>
+          <div className="testimonials-grid">
+            {testimonials.map((item, i) => (
+              <Reveal key={item.id} delay={i * 80}>
+                <blockquote className="testimonial">
+                  <p className="testimonial-quote">&ldquo;{item.quote}&rdquo;</p>
+                  <footer>
+                    <cite>{item.names}</cite>
+                    <span>{item.title}</span>
+                  </footer>
+                </blockquote>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section build-feature">
         <div className="container build-feature-inner">
           <Reveal>
@@ -156,6 +180,25 @@ export function Home() {
               Build Your Celebration →
             </Button>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section faq-section">
+        <div className="container">
+          <Reveal>
+            <p className="eyebrow">Questions</p>
+            <h2>Frequently asked</h2>
+          </Reveal>
+          <div className="faq-list">
+            {faqs.map((item, i) => (
+              <Reveal key={item.question} delay={i * 40}>
+                <details className="faq-item">
+                  <summary>{item.question}</summary>
+                  <p>{item.answer}</p>
+                </details>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 

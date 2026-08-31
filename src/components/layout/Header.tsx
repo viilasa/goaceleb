@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import logo from '../../assets/logo.svg';
 import './Header.css';
+
+const BRAND_LOGO =
+  'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788103509/logo_sdut0f.png';
 
 const links = [
   { to: '/services', label: 'Services' },
@@ -43,7 +45,14 @@ export function Header() {
       >
         <div className="site-header-inner">
           <Link to="/" className="brand" aria-label="Goa Celebrations home">
-            <img src={logo} alt="Goa Celebrations" className="brand-logo" width={180} height={31} />
+            <img
+              src={BRAND_LOGO}
+              alt="Goa Celebrations"
+              className="brand-logo"
+              width={160}
+              height={72}
+              decoding="async"
+            />
           </Link>
 
           <nav className="desktop-nav" aria-label="Primary">
