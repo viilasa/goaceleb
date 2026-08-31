@@ -112,7 +112,7 @@ export function organizationJsonLd() {
     description: SITE.description,
     foundingDate: String(SITE.foundingYear),
     image: absoluteUrl(SITE.ogImagePath),
-    logo: absoluteUrl('/favicon.svg'),
+    logo: absoluteUrl('/favicon.png'),
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE.address.line1,

@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import { SITE } from '../../config/site';
 import './Header.css';
-
-const BRAND_LOGO =
-  'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788103509/logo_sdut0f.png';
 
 const links = [
   { to: '/services', label: 'Services' },
@@ -46,11 +44,11 @@ export function Header() {
         <div className="site-header-inner">
           <Link to="/" className="brand" aria-label="Goa Celebrations home">
             <img
-              src={BRAND_LOGO}
+              src={SITE.logoUrl}
               alt="Goa Celebrations"
               className="brand-logo"
-              width={160}
-              height={72}
+              width={200}
+              height={90}
               decoding="async"
             />
           </Link>

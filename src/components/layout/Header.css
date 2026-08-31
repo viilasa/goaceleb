@@ -47,17 +47,18 @@
 }
 
 .brand-logo {
-  height: 2.65rem;
+  height: 3.75rem;
   width: auto;
-  max-width: min(42vw, 9.5rem);
+  max-width: min(58vw, 14rem);
   object-fit: contain;
+  object-position: left center;
   display: block;
 }
 
 @media (min-width: 768px) {
   .brand-logo {
-    height: 3.1rem;
-    max-width: 11rem;
+    height: 4.5rem;
+    max-width: 16rem;
   }
 }
 

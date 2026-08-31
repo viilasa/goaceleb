@@ -36,7 +36,7 @@ export function RouteSeo() {
           name: SITE.name,
           logo: {
             '@type': 'ImageObject',
-            url: absoluteUrl('/favicon.svg'),
+            url: absoluteUrl('/favicon.png'),
           },
         },
         mainEntityOfPage: absoluteUrl(`/blogs/${article.slug}`),

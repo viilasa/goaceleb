@@ -44,6 +44,8 @@ export const SITE = {
     eventsManaged: '1000+',
     founded: 'October 2010',
   },
+  logoUrl:
+    'https://res.cloudinary.com/ddhhlkyut/image/upload/e_trim/f_png/v1788103509/logo_sdut0f.png',
   ogImagePath: '/og-default.jpg',
   ogImageWidth: 1200,
   ogImageHeight: 630,
