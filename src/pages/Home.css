@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   min-height: 100svh;
+  min-height: 100dvh;
   display: flex;
   align-items: flex-end;
   color: #fff;
@@ -24,17 +25,18 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(26, 26, 26, 0.72) 0%,
-    rgba(26, 26, 26, 0.25) 45%,
-    rgba(26, 26, 26, 0.15) 100%
+    rgba(26, 26, 26, 0.78) 0%,
+    rgba(26, 26, 26, 0.28) 48%,
+    rgba(26, 26, 26, 0.18) 100%
   );
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  padding-bottom: clamp(3.5rem, 12vw, 6.5rem);
-  padding-top: calc(var(--nav-height) + 2rem);
+  padding-bottom: clamp(5.5rem, 14vw, 6.5rem);
+  padding-top: calc(var(--nav-height) + 1.5rem);
+  width: 100%;
 }
 
 .hero-content h1 {
@@ -44,10 +46,18 @@
 
 .hero-content p {
   max-width: 32rem;
-  font-size: clamp(1rem, 2.4vw, 1.15rem);
+  font-size: clamp(0.98rem, 3.2vw, 1.15rem);
   line-height: 1.7;
   opacity: 0.92;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
+}
+
+.hero-actions {
+  width: 100%;
+}
+
+.hero-actions .btn {
+  width: 100%;
 }
 
 .hero-btn {
@@ -55,7 +65,8 @@
   color: #fff;
 }
 
-.hero-btn:hover {
+.hero-btn:hover,
+.hero-btn:active {
   background: #fff;
   color: var(--color-text);
   border-color: #fff;
@@ -195,14 +206,28 @@
 }
 
 .service-arrow {
-  opacity: 0;
+  opacity: 0.45;
   transition: opacity var(--duration) var(--ease), transform var(--duration) var(--ease);
-  transform: translateX(-4px);
+  transform: none;
 }
 
-.service-row:hover .service-arrow {
+.service-row:hover .service-arrow,
+.service-row:active .service-arrow {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(2px);
+  color: var(--color-accent);
+}
+
+@media (min-width: 768px) {
+  .service-arrow {
+    opacity: 0;
+    transform: translateX(-4px);
+  }
+
+  .service-row:hover .service-arrow {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .services-cta {
@@ -232,6 +257,16 @@
 
 .final-cta h2 {
   max-width: 12ch;
+}
+
+@media (min-width: 480px) {
+  .hero-actions .btn {
+    width: auto;
+  }
+
+  .hero-content {
+    padding-bottom: clamp(4rem, 12vw, 6.5rem);
+  }
 }
 
 @media (min-width: 768px) {
@@ -269,6 +304,10 @@
   .core-area:nth-child(2n) {
     padding-left: var(--space-5);
     border-right: none;
+  }
+
+  .hero-content {
+    padding-bottom: clamp(3.5rem, 12vw, 6.5rem);
   }
 }
 

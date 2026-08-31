@@ -25,10 +25,11 @@
   --space-9: 6rem;
   --space-10: 8rem;
 
-  --nav-height: 4rem;
-  --container: min(1120px, calc(100% - 2.5rem));
-  --container-wide: min(1280px, calc(100% - 2.5rem));
-  --container-narrow: min(720px, calc(100% - 2.5rem));
+  --nav-height: 3.75rem;
+  --container: min(1120px, calc(100% - 2rem));
+  --container-wide: min(1280px, calc(100% - 2rem));
+  --container-narrow: min(720px, calc(100% - 2rem));
+  --sticky-cta-height: 4.75rem;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --duration: 0.45s;
@@ -45,6 +46,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -56,6 +58,8 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  min-height: 100dvh;
 }
 
 img {
@@ -67,6 +71,7 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button,
@@ -75,12 +80,14 @@ select,
 textarea {
   font: inherit;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
   cursor: pointer;
   background: none;
   border: none;
+  touch-action: manipulation;
 }
 
 ul,
@@ -96,18 +103,19 @@ h4 {
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.01em;
+  text-wrap: balance;
 }
 
 h1 {
-  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-size: clamp(2.15rem, 9vw, 5.5rem);
 }
 
 h2 {
-  font-size: clamp(2rem, 5vw, 3.75rem);
+  font-size: clamp(1.75rem, 6vw, 3.75rem);
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-size: clamp(1.35rem, 4vw, 2.25rem);
 }
 
 p {
@@ -264,13 +272,15 @@ p {
 .field select,
 .field textarea {
   width: 100%;
-  padding: 0.9rem 0;
+  padding: 0.95rem 0;
   border: none;
   border-bottom: 1px solid var(--color-border);
   background: transparent;
   border-radius: 0;
   transition: border-color var(--duration) var(--ease);
   outline: none;
+  font-size: 16px; /* prevents iOS zoom on focus */
+  min-height: 48px;
 }
 
 .field input:focus,
@@ -309,7 +319,21 @@ p {
 
 /* Mobile sticky CTA spacer */
 .has-mobile-cta {
-  padding-bottom: 5rem;
+  padding-bottom: calc(var(--sticky-cta-height) + env(safe-area-inset-bottom));
+}
+
+@media (max-width: 767px) {
+  main.has-mobile-cta + .site-footer {
+    padding-bottom: calc(var(--space-6) + var(--sticky-cta-height) + env(safe-area-inset-bottom));
+  }
+
+  .section {
+    padding-block: var(--space-7);
+  }
+
+  .page-header {
+    padding-block: var(--space-6) var(--space-5);
+  }
 }
 
 @media (min-width: 768px) {

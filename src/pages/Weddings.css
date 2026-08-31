@@ -1,3 +1,14 @@
+.filter-chip {
+  flex-shrink: 0;
+  padding: 0.65rem 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  border: 1px solid var(--color-border);
+  min-height: 44px;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+
 .weddings-page .filter-bar {
   display: flex;
   flex-wrap: nowrap;
@@ -5,22 +16,15 @@
   overflow-x: auto;
   padding-bottom: var(--space-4);
   margin-bottom: var(--space-5);
+  margin-inline: -0.15rem;
+  padding-inline: 0.15rem;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+  scroll-snap-type: x proximity;
 }
 
 .weddings-page .filter-bar::-webkit-scrollbar {
   display: none;
-}
-
-.filter-chip {
-  flex-shrink: 0;
-  padding: 0.55rem 0.9rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.03em;
-  border: 1px solid var(--color-border);
-  min-height: 44px;
-  white-space: nowrap;
 }
 
 .filter-chip.is-active {

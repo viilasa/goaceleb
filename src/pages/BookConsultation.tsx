@@ -53,7 +53,16 @@ export function BookConsultation() {
   const [time, setTime] = useState('');
   const [confirmed, setConfirmed] = useState(false);
   const [enquirySubmitted, setEnquirySubmitted] = useState(false);
-  const [enquiry, setEnquiry] = useState({
+  const [enquiry, setEnquiry] = useState<{
+    name: string;
+    partnerName: string;
+    phone: string;
+    email: string;
+    weddingMonth: string;
+    guestCount: string;
+    estimatedBudget: string;
+    message: string;
+  }>({
     name: contact.name,
     partnerName: contact.partnerName,
     phone: contact.phone,
@@ -62,7 +71,7 @@ export function BookConsultation() {
       selections.month && selections.year
         ? `${selections.month} ${selections.year}`
         : selections.month,
-    guestCount: selections.guestRange,
+    guestCount: selections.guestRange || '',
     estimatedBudget: estimate ? `${estimate.minimum}–${estimate.maximum} L` : '',
     message: contact.message || '',
   });
