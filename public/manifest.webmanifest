@@ -1,0 +1,18 @@
+{
+  "name": "Goa Celebrations",
+  "short_name": "Goa Celebrations",
+  "description": "Premium destination weddings and celebrations in Goa.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "lang": "en-IN",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

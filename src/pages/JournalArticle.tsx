@@ -11,8 +11,8 @@ export function JournalArticle() {
     return (
       <div className="page container" style={{ paddingBlock: '6rem' }}>
         <h1>Article not found</h1>
-        <Button to="/journal" variant="primary" style={{ marginTop: '2rem' }}>
-          Back to Journal
+        <Button to="/blogs" variant="primary" style={{ marginTop: '2rem' }}>
+          Back to Blogs
         </Button>
       </div>
     );
@@ -45,8 +45,8 @@ export function JournalArticle() {
       </div>
 
       <footer className="article-footer container-narrow">
-        <Link to="/journal" className="link-arrow">
-          ← All articles
+        <Link to="/blogs" className="link-arrow">
+          ← All blogs
         </Link>
         <div className="article-cta">
           <h2>Ready to plan yours?</h2>

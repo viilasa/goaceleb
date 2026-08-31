@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes, useParams } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import { CelebrationProvider } from './context/CelebrationContext';
 import { About } from './pages/About';
@@ -7,10 +7,14 @@ import { BuildCelebration } from './pages/BuildCelebration';
 import { Home } from './pages/Home';
 import { Journal } from './pages/Journal';
 import { JournalArticle } from './pages/JournalArticle';
-import { Packages } from './pages/Packages';
 import { Services } from './pages/Services';
 import { WeddingStory } from './pages/WeddingStory';
 import { Weddings } from './pages/Weddings';
+
+function JournalSlugRedirect() {
+  const { slug } = useParams();
+  return <Navigate to={`/blogs/${slug || ''}`} replace />;
+}
 
 export default function App() {
   return (
@@ -22,12 +26,14 @@ export default function App() {
             <Route path="weddings" element={<Weddings />} />
             <Route path="weddings/:slug" element={<WeddingStory />} />
             <Route path="services" element={<Services />} />
-            <Route path="packages" element={<Packages />} />
             <Route path="plan/build" element={<BuildCelebration />} />
             <Route path="plan" element={<Navigate to="/plan/build" replace />} />
             <Route path="about" element={<About />} />
-            <Route path="journal" element={<Journal />} />
-            <Route path="journal/:slug" element={<JournalArticle />} />
+            <Route path="blogs" element={<Journal />} />
+            <Route path="blogs/:slug" element={<JournalArticle />} />
+            <Route path="journal" element={<Navigate to="/blogs" replace />} />
+            <Route path="journal/:slug" element={<JournalSlugRedirect />} />
+            <Route path="packages" element={<Navigate to="/" replace />} />
             <Route path="contact" element={<Navigate to="/book?mode=enquiry" replace />} />
             <Route path="book" element={<BookConsultation />} />
             <Route path="*" element={<Navigate to="/" replace />} />

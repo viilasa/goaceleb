@@ -7,7 +7,7 @@ import './Packages.css';
 export function Packages() {
   return (
     <div className="page packages-page">
-      <header className="page-header container">
+      <header className="page-header container-wide">
         <p className="eyebrow">Starting Points</p>
         <h1>Packages</h1>
         <p className="lede">

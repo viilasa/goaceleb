@@ -1,0 +1,10 @@
+# AI discovery for Goa Celebrations
+# See also: /llms.txt and /llms-full.txt
+
+User-Agent: *
+Allow: /
+
+llms-txt: /llms.txt
+llms-full-txt: /llms-full.txt
+Sitemap: /sitemap.xml
+Contact: hello@goacelebrations.com

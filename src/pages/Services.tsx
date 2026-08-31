@@ -6,7 +6,7 @@ import './Services.css';
 export function Services() {
   return (
     <div className="page services-page">
-      <header className="page-header container">
+      <header className="page-header container-wide">
         <p className="eyebrow">Expertise</p>
         <h1>Services</h1>
         <p className="lede">

@@ -11,20 +11,34 @@
 
 .weddings-page .filter-bar {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-2);
-  overflow-x: auto;
   padding-bottom: var(--space-4);
   margin-bottom: var(--space-5);
-  margin-inline: -0.15rem;
-  padding-inline: 0.15rem;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  scroll-snap-type: x proximity;
 }
 
-.weddings-page .filter-bar::-webkit-scrollbar {
-  display: none;
+@media (max-width: 639px) {
+  .weddings-page .filter-bar {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-snap-type: x proximity;
+    /* keep same side inset as the page title */
+    width: var(--container-wide);
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
+  .weddings-page .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .weddings-page .filter-bar .filter-chip {
+    scroll-snap-align: start;
+  }
 }
 
 .filter-chip.is-active {

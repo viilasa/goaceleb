@@ -6,9 +6,9 @@ import './Journal.css';
 export function Journal() {
   return (
     <div className="page journal-page">
-      <header className="page-header container">
+      <header className="page-header container-wide">
         <p className="eyebrow">Guides & Notes</p>
-        <h1>Journal</h1>
+        <h1>Blogs</h1>
         <p className="lede">
           Practical guidance for planning a destination wedding in Goa — budgets, seasons, venues
           and multi-day celebrations.
@@ -19,7 +19,7 @@ export function Journal() {
         {journalArticles.map((article, i) => (
           <Reveal key={article.id} delay={i * 50}>
             <article className="journal-item">
-              <Link to={`/journal/${article.slug}`}>
+              <Link to={`/blogs/${article.slug}`}>
                 <div className="journal-image">
                   <img src={article.coverImage} alt="" loading="lazy" />
                 </div>

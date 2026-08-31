@@ -118,7 +118,7 @@ export function BuildCelebration() {
 
   return (
     <div className="page build-page">
-      <header className="page-header container">
+      <header className="page-header container-wide">
         <p className="eyebrow">Plan Your Wedding</p>
         <h1>Build Your Celebration</h1>
         <p className="lede">

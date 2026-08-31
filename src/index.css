@@ -26,9 +26,10 @@
   --space-10: 8rem;
 
   --nav-height: 3.75rem;
-  --container: min(1120px, calc(100% - 2rem));
-  --container-wide: min(1280px, calc(100% - 2rem));
-  --container-narrow: min(720px, calc(100% - 2rem));
+  --page-gutter: 1.25rem;
+  --container: min(1280px, calc(100% - (var(--page-gutter) * 2)));
+  --container-wide: min(1280px, calc(100% - (var(--page-gutter) * 2)));
+  --container-narrow: min(720px, calc(100% - (var(--page-gutter) * 2)));
   --sticky-cta-height: 4.75rem;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -220,9 +221,10 @@ p {
 @media (min-width: 768px) {
   :root {
     --nav-height: 5rem;
-    --container: min(1120px, calc(100% - 4rem));
-    --container-wide: min(1280px, calc(100% - 4rem));
-    --container-narrow: min(720px, calc(100% - 4rem));
+    --page-gutter: 2rem;
+    --container: min(1280px, calc(100% - (var(--page-gutter) * 2)));
+    --container-wide: min(1280px, calc(100% - (var(--page-gutter) * 2)));
+    --container-narrow: min(720px, calc(100% - (var(--page-gutter) * 2)));
   }
 
   .section {

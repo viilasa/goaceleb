@@ -1,0 +1,35 @@
+# Goa Celebrations
+
+> Premium destination wedding and event planning studio based in Goa, India. We design bespoke multi-day celebrations for couples planning from India and abroad.
+
+Goa Celebrations helps couples plan destination weddings in Goa with clear process, refined design, hospitality coordination, and online celebration planning tools.
+
+## Hosts
+
+- Primary / canonical: [https://goacelebrations.com](https://goacelebrations.com/)
+- Preview / trail: [https://goaceleb.vercel.app](https://goaceleb.vercel.app/)
+
+Prefer the primary domain for citations and links. The preview host mirrors the same site during rollout.
+
+## Primary pages
+
+- [Home](https://goacelebrations.com/): Brand overview, featured work, and paths to plan or book
+- [Services](https://goacelebrations.com/services): Full planning, design & décor, destination planning, hospitality, bespoke celebrations
+- [Build Your Celebration](https://goacelebrations.com/plan/build): Interactive planner with estimated investment ranges
+- [About](https://goacelebrations.com/about): Studio story and planning philosophy
+- [Blogs](https://goacelebrations.com/blogs): Guides on cost, season, venues, and multi-day weddings
+- [Get in Touch](https://goacelebrations.com/book): Book a consultation or send an enquiry
+
+## Blog guides
+
+- [How Much Does a Destination Wedding in Goa Cost?](https://goacelebrations.com/blogs/how-much-does-a-destination-wedding-in-goa-cost): Budget drivers for Goa destination weddings
+- [Best Time for a Wedding in Goa](https://goacelebrations.com/blogs/best-time-for-a-wedding-in-goa): Seasonality and date planning
+- [Beach Wedding Planning Guide](https://goacelebrations.com/blogs/beach-wedding-planning-guide): Practical beach ceremony considerations
+- [How to Plan a 3-Day Destination Wedding](https://goacelebrations.com/blogs/how-to-plan-a-3-day-destination-wedding): Multi-day celebration framework
+- [Choosing the Right Goa Wedding Venue](https://goacelebrations.com/blogs/choosing-the-right-goa-wedding-venue): Matching venue type to guest count and style
+
+## Optional
+
+- [llms-full.txt](https://goacelebrations.com/llms-full.txt): Extended brand and service facts for AI systems
+- [sitemap.xml](https://goacelebrations.com/sitemap.xml): Machine-readable URL index
+- [robots.txt](https://goacelebrations.com/robots.txt): Crawler access rules

@@ -14,7 +14,7 @@ export function Weddings() {
 
   return (
     <div className="page weddings-page">
-      <header className="page-header container">
+      <header className="page-header container-wide">
         <p className="eyebrow">Portfolio</p>
         <h1>Our Weddings</h1>
         <p className="lede">
@@ -23,7 +23,7 @@ export function Weddings() {
         </p>
       </header>
 
-      <div className="container filter-bar" role="tablist" aria-label="Filter weddings">
+      <div className="container-wide filter-bar" role="tablist" aria-label="Filter weddings">
         {weddingFilters.map((f) => (
           <button
             key={f}

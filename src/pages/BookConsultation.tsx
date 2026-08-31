@@ -252,7 +252,7 @@ export function BookConsultation() {
 
   return (
     <div className="page book-page">
-      <header className="page-header container">
+      <header className="page-header container-wide">
         <p className="eyebrow">Let&apos;s Talk</p>
         <h1>Get in Touch</h1>
         <p className="lede">

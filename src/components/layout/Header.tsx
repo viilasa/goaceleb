@@ -4,12 +4,10 @@ import logo from '../../assets/logo.svg';
 import './Header.css';
 
 const links = [
-  { to: '/weddings', label: 'Our Weddings' },
   { to: '/services', label: 'Services' },
-  { to: '/packages', label: 'Packages' },
   { to: '/plan/build', label: 'Plan Your Wedding' },
   { to: '/about', label: 'About' },
-  { to: '/journal', label: 'Journal' },
+  { to: '/blogs', label: 'Blogs' },
 ];
 
 export function Header() {

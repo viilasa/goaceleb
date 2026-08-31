@@ -13,16 +13,14 @@ export function Footer() {
 
         <div className="footer-col">
           <h4>Explore</h4>
-          <Link to="/weddings">Our Weddings</Link>
           <Link to="/services">Services</Link>
-          <Link to="/packages">Packages</Link>
           <Link to="/plan/build">Build Your Celebration</Link>
         </div>
 
         <div className="footer-col">
           <h4>Company</h4>
           <Link to="/about">About</Link>
-          <Link to="/journal">Journal</Link>
+          <Link to="/blogs">Blogs</Link>
           <Link to="/book">Get in Touch</Link>
         </div>
 

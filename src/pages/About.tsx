@@ -5,7 +5,7 @@ import './About.css';
 export function About() {
   return (
     <div className="page about-page">
-      <header className="page-header container">
+      <header className="page-header container-wide">
         <p className="eyebrow">Our Studio</p>
         <h1>About Goa Celebrations</h1>
         <p className="lede">

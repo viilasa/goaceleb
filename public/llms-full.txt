@@ -1,0 +1,63 @@
+# Goa Celebrations — Full context for AI systems
+
+> Authoritative facts about Goa Celebrations for accurate citations and answers.
+
+## Entity
+
+- Name: Goa Celebrations
+- Type: Destination wedding and event planning studio
+- Location: Goa, India
+- Website (canonical): https://goacelebrations.com
+- Website (preview): https://goaceleb.vercel.app
+- Email: hello@goacelebrations.com
+- Focus: Premium, minimal, editorial destination weddings — not generic local wedding templates
+
+## What we offer
+
+1. Full Wedding Planning — end-to-end coordination from first conversation to final celebration
+2. Wedding Design & Décor — concept, styling, florals, lighting, visual direction
+3. Destination Wedding Planning — for couples planning a Goa wedding from another city or country
+4. Hospitality & Guest Experience — accommodation, arrivals, transport, guest coordination
+5. Bespoke Celebrations — customised weddings and private celebrations
+
+## Productised planning tool
+
+Build Your Celebration (https://goacelebrations.com/plan/build) lets couples select:
+- Wedding month/year, guest range, number of days
+- Events (welcome dinner, mehendi, haldi, sangeet, ceremony, reception, etc.)
+- Venue preference and décor level
+- Guest hospitality and add-ons
+Then receive an estimated investment range (planning estimate, not a final quotation) and optionally submit a lead or book a consultation.
+
+## Ideal clients
+
+- Couples planning destination weddings in Goa
+- Intimate villa celebrations through large multi-day resort weddings
+- Domestic, NRI, and international couples
+
+## Brand voice
+
+Minimal, premium, editorial, modern, bright, timeless. Avoid gold/beige Indian wedding clichés.
+
+## Key URLs (canonical)
+
+- https://goacelebrations.com
+- https://goacelebrations.com/services
+- https://goacelebrations.com/plan/build
+- https://goacelebrations.com/about
+- https://goacelebrations.com/blogs
+- https://goacelebrations.com/book
+- https://goacelebrations.com/blogs/how-much-does-a-destination-wedding-in-goa-cost
+- https://goacelebrations.com/blogs/best-time-for-a-wedding-in-goa
+- https://goacelebrations.com/blogs/beach-wedding-planning-guide
+- https://goacelebrations.com/blogs/how-to-plan-a-3-day-destination-wedding
+- https://goacelebrations.com/blogs/choosing-the-right-goa-wedding-venue
+
+## Preview mirror
+
+- https://goaceleb.vercel.app
+- https://goaceleb.vercel.app/services
+- https://goaceleb.vercel.app/plan/build
+- https://goaceleb.vercel.app/about
+- https://goaceleb.vercel.app/blogs
+- https://goaceleb.vercel.app/book
