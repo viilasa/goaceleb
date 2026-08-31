@@ -29,49 +29,58 @@ export function Header() {
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
+    document.body.classList.toggle('menu-open', open);
     return () => {
       document.body.style.overflow = '';
+      document.body.classList.remove('menu-open');
     };
   }, [open]);
 
   return (
-    <header
-      className={`site-header ${scrolled || !isHome || open ? 'is-solid' : ''} ${isHome && !scrolled && !open ? 'is-over-hero' : ''}`}
-    >
-      <div className="site-header-inner">
-        <Link to="/" className="brand" aria-label="Goa Celebrations home">
-          <img src={logo} alt="Goa Celebrations" className="brand-logo" width={180} height={31} />
-        </Link>
-
-        <nav className="desktop-nav" aria-label="Primary">
-          {links.map((link) => (
-            <NavLink
-              key={link.to}
-              to={link.to}
-              className={({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`}
-            >
-              {link.label}
-            </NavLink>
-          ))}
-          <Link to="/book" className="nav-cta">
-            Book a Consultation
+    <>
+      <header
+        className={`site-header ${scrolled || !isHome || open ? 'is-solid' : ''} ${isHome && !scrolled && !open ? 'is-over-hero' : ''} ${open ? 'is-menu-open' : ''}`}
+      >
+        <div className="site-header-inner">
+          <Link to="/" className="brand" aria-label="Goa Celebrations home">
+            <img src={logo} alt="Goa Celebrations" className="brand-logo" width={180} height={31} />
           </Link>
-        </nav>
 
-        <button
-          type="button"
-          className={`menu-toggle ${open ? 'is-open' : ''}`}
-          aria-expanded={open}
-          aria-controls="mobile-menu"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-          onClick={() => setOpen((v) => !v)}
-        >
-          <span />
-          <span />
-        </button>
-      </div>
+          <nav className="desktop-nav" aria-label="Primary">
+            {links.map((link) => (
+              <NavLink
+                key={link.to}
+                to={link.to}
+                className={({ isActive }) => `nav-link ${isActive ? 'is-active' : ''}`}
+              >
+                {link.label}
+              </NavLink>
+            ))}
+            <Link to="/book" className="nav-cta">
+              Book a Consultation
+            </Link>
+          </nav>
 
-      <div id="mobile-menu" className={`mobile-menu ${open ? 'is-open' : ''}`} hidden={!open}>
+          <button
+            type="button"
+            className={`menu-toggle ${open ? 'is-open' : ''}`}
+            aria-expanded={open}
+            aria-controls="mobile-menu"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+            onClick={() => setOpen((v) => !v)}
+          >
+            <span />
+            <span />
+          </button>
+        </div>
+      </header>
+
+      {/* Outside header so backdrop-filter on nav doesn't clip fixed full-screen menu */}
+      <div
+        id="mobile-menu"
+        className={`mobile-menu ${open ? 'is-open' : ''}`}
+        hidden={!open}
+      >
         <nav aria-label="Mobile">
           {links.map((link) => (
             <NavLink key={link.to} to={link.to} className="mobile-link">
@@ -83,6 +92,6 @@ export function Header() {
           </Link>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
