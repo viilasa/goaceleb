@@ -34,7 +34,7 @@ export default function App() {
             <Route path="journal" element={<Navigate to="/blogs" replace />} />
             <Route path="journal/:slug" element={<JournalSlugRedirect />} />
             <Route path="packages" element={<Navigate to="/" replace />} />
-            <Route path="contact" element={<Navigate to="/book?mode=enquiry" replace />} />
+            <Route path="contact" element={<Navigate to="/book" replace />} />
             <Route path="book" element={<BookConsultation />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>

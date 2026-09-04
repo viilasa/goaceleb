@@ -43,7 +43,7 @@ const emptyWedding: CelebrationSelections = {
 export function BookConsultation() {
   const [searchParams] = useSearchParams();
   const initialMode: PageMode =
-    searchParams.get('mode') === 'enquiry' ? 'enquiry' : 'book';
+    searchParams.get('mode') === 'book' ? 'book' : 'enquiry';
 
   const { contact, selections, estimate, leadId, updateContact, updateSelections, setLeadId } =
     useCelebration();
@@ -257,8 +257,8 @@ export function BookConsultation() {
         <p className="eyebrow">Let&apos;s Talk</p>
         <h1>Get in Touch</h1>
         <p className="lede">
-          Book a consultation or send a short enquiry — whichever feels right to begin. You can also
-          reach us at {SITE.address.full}.
+          Send a message to get started, or book a consultation when you&apos;re ready to talk
+          through dates. You can also reach us at {SITE.address.full}.
         </p>
         <p className="book-direct-contact">
           <a href={`tel:${SITE.phoneTel}`}>{SITE.phone}</a>
@@ -276,20 +276,20 @@ export function BookConsultation() {
           <button
             type="button"
             role="tab"
+            aria-selected={mode === 'enquiry'}
+            className={`mode-chip ${mode === 'enquiry' ? 'is-active' : ''}`}
+            onClick={() => switchMode('enquiry')}
+          >
+            Contact Form
+          </button>
+          <button
+            type="button"
+            role="tab"
             aria-selected={mode === 'book'}
             className={`mode-chip ${mode === 'book' ? 'is-active' : ''}`}
             onClick={() => switchMode('book')}
           >
             Book a Consultation
-          </button>
-          <button
-            type="button"
-            role="tab"
-            aria-selected={mode === 'enquiry'}
-            className={`mode-chip ${mode === 'enquiry' ? 'is-active' : ''}`}
-            onClick={() => switchMode('enquiry')}
-          >
-            Send an Enquiry
           </button>
         </div>
 
@@ -554,9 +554,9 @@ export function BookConsultation() {
 
         {mode === 'enquiry' && (
           <section>
-            <h2 className="step-title">Send an Enquiry</h2>
+            <h2 className="step-title">Contact Form</h2>
             <p className="step-help">
-              Prefer a short note? Share a few details and we&apos;ll start the conversation.
+              Share a few details and we&apos;ll get back to you shortly.
             </p>
 
             <form onSubmit={onSubmitEnquiry} noValidate>
