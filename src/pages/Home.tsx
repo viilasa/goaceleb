@@ -3,16 +3,14 @@ import { Button } from '../components/ui/Button';
 import { Reveal } from '../components/ui/Reveal';
 import { SITE } from '../config/site';
 import { faqs, testimonials } from '../data/brand';
+import { weddingMoments } from '../data/homeMoments';
 import { coreAreas, homeServicePreview } from '../data/services';
-import { getFeaturedWeddings } from '../data/weddings';
 import './Home.css';
 
 const heroImage =
   'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788951230/redgh_r9unml.png';
 
 export function Home() {
-  const featured = getFeaturedWeddings();
-
   return (
     <div className="home">
       <section className="hero">
@@ -37,8 +35,8 @@ export function Home() {
             <Button to="/plan/build" variant="primary" className="hero-btn">
               Start Planning Your Wedding
             </Button>
-            <Button to="/weddings" variant="secondary" className="hero-btn hero-btn-light">
-              Explore Our Weddings
+            <Button to="/services" variant="secondary" className="hero-btn hero-btn-light">
+              Explore Our Services
             </Button>
           </div>
         </div>
@@ -79,40 +77,28 @@ export function Home() {
         <div className="container-wide">
           <Reveal>
             <div className="section-heading">
-              <p className="eyebrow">Selected Work</p>
-              <h2>Featured Weddings</h2>
+              <p className="eyebrow">From Our Celebrations</p>
+              <h2>Wedding Moments</h2>
             </div>
           </Reveal>
 
           <div className="featured-editorial">
-            {featured.map((wedding, i) => (
-              <Reveal key={wedding.id} delay={i * 60}>
-                <article className={`featured-item size-${wedding.featuredSize || 'medium'}`}>
-                  <Link to={`/weddings/${wedding.slug}`} className="featured-link">
+            {weddingMoments.map((moment, i) => (
+              <Reveal key={moment.id} delay={i * 60}>
+                <article className={`featured-item size-${moment.size || 'medium'}`}>
+                  <div className="featured-card">
                     <div className="featured-image">
-                      <img src={wedding.coverImage} alt={wedding.name} loading="lazy" />
+                      <img src={moment.image} alt={moment.title} loading="lazy" />
                     </div>
                     <div className="featured-meta">
-                      <h3>{wedding.name}</h3>
-                      <p>
-                        {wedding.location} · {wedding.days} Day{wedding.days > 1 ? 's' : ''}
-                      </p>
-                      <p className="featured-desc">{wedding.shortDescription}</p>
-                      <span className="link-arrow">View Story →</span>
+                      <h3>{moment.title}</h3>
+                      <p className="featured-desc">{moment.description}</p>
                     </div>
-                  </Link>
+                  </div>
                 </article>
               </Reveal>
             ))}
           </div>
-
-          <Reveal>
-            <div className="section-cta">
-              <Link to="/weddings" className="link-arrow">
-                View All Weddings →
-              </Link>
-            </div>
-          </Reveal>
         </div>
       </section>
 

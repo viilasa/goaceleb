@@ -135,7 +135,7 @@
   gap: var(--space-7);
 }
 
-.featured-link {
+.featured-card {
   display: grid;
   gap: var(--space-4);
 }
@@ -152,7 +152,7 @@
   transition: transform 0.9s var(--ease);
 }
 
-.featured-link:hover .featured-image img {
+.featured-card:hover .featured-image img {
   transform: scale(1.03);
 }
 
@@ -161,16 +161,11 @@
   margin-bottom: 0.35rem;
 }
 
-.featured-meta > p:first-of-type {
-  font-size: 0.9rem;
-  color: var(--color-text-soft);
-  margin-bottom: var(--space-3);
-}
-
 .featured-desc {
   color: var(--color-text-muted);
-  margin-bottom: var(--space-3);
   font-size: 0.95rem;
+  max-width: 36rem;
+  line-height: 1.65;
 }
 
 .section-cta {
