@@ -8,7 +8,7 @@ import { getFeaturedWeddings } from '../data/weddings';
 import './Home.css';
 
 const heroImage =
-  'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788103862/2_duarq2.jpg';
+  'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788951230/redgh_r9unml.png';
 
 export function Home() {
   const featured = getFeaturedWeddings();
