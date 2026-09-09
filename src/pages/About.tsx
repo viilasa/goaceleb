@@ -15,8 +15,8 @@ export function About() {
 
       <div className="about-visual container-wide">
         <img
-          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=80"
-          alt="Goa coastline"
+          src="https://res.cloudinary.com/ddhhlkyut/image/upload/v1788958066/blog_a65b3490-484c-4a62-80d6-07410256fba3_hgswge.webp"
+          alt="Sunset beach in Goa"
           loading="lazy"
         />
       </div>
