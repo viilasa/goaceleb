@@ -40,7 +40,7 @@ export const services: Service[] = [
     description:
       'A lively, personalised Sangeet with thematic décor, choreography support, entertainment options and comprehensive planning so the night feels effortless and memorable.',
     image:
-      'https://saathiya.co/wp-content/uploads/2024/10/Sangeet2_Intro-scaled-e1728690427287-1024x642.jpeg',
+      'https://dgassphotography.com/wp-content/uploads/2024/11/Priyani-Abilash-Cheyenne-Mountain-Resort-04975-scaled.jpg',
   },
   {
     id: '5',
