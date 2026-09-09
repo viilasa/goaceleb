@@ -12,7 +12,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-11-20',
     readTime: '7 min',
     coverImage:
-      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788958066/blog_a65b3490-484c-4a62-80d6-07410256fba3_hgswge.webp',
+      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&q=80',
     content: [
       'Goa offers what many couples want from a destination wedding: beautiful shoreline venues, established resorts, and a calendar that supports outdoor celebrations for much of the year.',
       'Guests can fly into Dabolim or Mopa and settle into beachside or resort stays without long inland travel — which makes multi-day celebrations easier to host.',
@@ -30,7 +30,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-11-12',
     readTime: '8 min',
     coverImage:
-      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788104303/1_copty_foqajm.jpg',
+      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=1400&q=80',
     content: [
       'There is no single fixed price for a Goa destination wedding. Cost varies with guest count, number of events, venue type and how immersive you want décor and experiences to be.',
       'Venue and accommodation often form the foundation of the budget. Beachfront resorts, private villas and heritage properties each come with different structures and capacities.',
@@ -49,7 +49,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-10-18',
     readTime: '8 min',
     coverImage:
-      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788104315/3_copy_nrsnjb.jpg',
+      'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1400&q=80',
     content: [
       'Start with guest count and the number of events. A villa may suit eighty guests; a resort campus often serves larger multi-day celebrations better.',
       'Properties that combine ceremony spaces with accommodation reduce transfer friction for destination guests.',
@@ -67,7 +67,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-09-28',
     readTime: '6 min',
     coverImage:
-      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788103958/coppopyf_mpfazc.jpg',
+      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1400&q=80',
     content: [
       'Beach and destination settings favour palettes that feel natural in daylight — ivory, sand, soft blush and greens that echo the landscape.',
       'Sunset tones — coral, amber, deep terracotta — work especially well for evening Sangeet and reception moments.',
@@ -85,7 +85,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-09-10',
     readTime: '7 min',
     coverImage:
-      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788951230/redgh_r9unml.png',
+      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1400&q=80',
     content: [
       'Destination weddings involve more moving parts than a hometown celebration — venues, travel, permissions and guest care across several days.',
       'A local planner knows which resorts suit which guest counts, how beach ceremonies work in practice, and which vendors deliver consistently.',
@@ -103,7 +103,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-08-22',
     readTime: '7 min',
     coverImage:
-      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788103862/2_duarq2.jpg',
+      'https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1400&q=80',
     content: [
       'A beach wedding in Goa begins with the right stretch of shoreline — private resort beaches often simplify permissions and guest access.',
       'Tide timing, sun direction and wind influence ceremony placement and photography. Plan these from the first site visit.',
@@ -121,7 +121,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-08-05',
     readTime: '6 min',
     coverImage:
-      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788956351/5U2A7548_f2ebho.jpg',
+      'https://images.unsplash.com/photo-1470252649378-9c5948d327ef?w=1400&q=80',
     content: [
       'Goa’s peak wedding season typically runs from November through February, when skies are clear and evenings are comfortable outdoors.',
       'Shoulder months can offer softer light, fewer crowds and more venue flexibility — with careful planning around weather.',
@@ -139,7 +139,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-07-14',
     readTime: '9 min',
     coverImage:
-      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788103994/DSC_9221_xg1o0m.jpg',
+      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1400&q=80',
     content: [
       'Three days is a natural rhythm for destination weddings: arrival and welcome, celebration day, and a softer farewell.',
       'Pace matters. Guests travelling into Goa need breathing room between events — and the celebration feels better for it.',
