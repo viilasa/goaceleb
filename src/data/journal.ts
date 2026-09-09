@@ -121,7 +121,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-08-05',
     readTime: '6 min',
     coverImage:
-      'https://images.unsplash.com/photo-1470252649378-9c5948d327ef?w=1400&q=80',
+      'https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=1400&q=80',
     content: [
       'Goa’s peak wedding season typically runs from November through February, when skies are clear and evenings are comfortable outdoors.',
       'Shoulder months can offer softer light, fewer crowds and more venue flexibility — with careful planning around weather.',
