@@ -20,7 +20,7 @@ export const services: Service[] = [
     description:
       'Specialist beach wedding planning in Goa — beautiful shoreline venues, refined beach décor, experienced on-ground teams and customised planning for intimate or larger celebrations.',
     image:
-      'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&q=80',
+      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788104315/3_copy_nrsnjb.jpg',
   },
   {
     id: '3',
@@ -30,7 +30,7 @@ export const services: Service[] = [
     description:
       'Culturally rich Haldi and Mehendi experiences with elegant setups, quality styling, personalised service and seamless integration into your multi-day Goa wedding.',
     image:
-      'https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1400&q=80',
+      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788956351/5U2A7548_f2ebho.jpg',
   },
   {
     id: '4',
@@ -40,7 +40,7 @@ export const services: Service[] = [
     description:
       'A lively, personalised Sangeet with thematic décor, choreography support, entertainment options and comprehensive planning so the night feels effortless and memorable.',
     image:
-      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1400&q=80',
+      'https://www.theknot.com/tk-media/images/0990bf67-cb5d-4f68-8a21-48c8c3cbe386',
   },
   {
     id: '5',
