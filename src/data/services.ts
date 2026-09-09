@@ -20,7 +20,7 @@ export const services: Service[] = [
     description:
       'Specialist beach wedding planning in Goa — beautiful shoreline venues, refined beach décor, experienced on-ground teams and customised planning for intimate or larger celebrations.',
     image:
-      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788104315/3_copy_nrsnjb.jpg',
+      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788971967/5U2A9934_bzruki.jpg,
   },
   {
     id: '3',
