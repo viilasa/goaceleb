@@ -40,7 +40,7 @@ export const services: Service[] = [
     description:
       'A lively, personalised Sangeet with thematic décor, choreography support, entertainment options and comprehensive planning so the night feels effortless and memorable.',
     image:
-      'https://www.theknot.com/tk-media/images/0990bf67-cb5d-4f68-8a21-48c8c3cbe386',
+      'https://saathiya.co/wp-content/uploads/2024/10/Sangeet2_Intro-scaled-e1728690427287-1024x642.jpeg',
   },
   {
     id: '5',
