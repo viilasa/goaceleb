@@ -22,6 +22,7 @@ import {
   YEARS,
 } from '../data/calculatorConfig';
 import { generateLeadId, saveLead } from '../lib/leadStorage';
+import { submitLeadToFormSubmit } from '../lib/formSubmit';
 import { computeLeadScore, formatLakhs, formatLakhsRange } from '../lib/pricing';
 import type {
   ContactMethod,
@@ -98,7 +99,7 @@ export function BuildCelebration() {
     if (step > 1) setStep(step - 1);
   };
 
-  const submitLead = (e: FormEvent) => {
+  const submitLead = async (e: FormEvent) => {
     e.preventDefault();
     if (!estimate) return;
 
@@ -120,6 +121,7 @@ export function BuildCelebration() {
 
     saveLead(lead);
     setLeadId(id);
+    await submitLeadToFormSubmit(lead);
     setLeadSubmitted(true);
   };
 

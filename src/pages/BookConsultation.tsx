@@ -13,6 +13,7 @@ import {
   saveBooking,
 } from '../data/consultation';
 import { generateLeadId, getLeadById, saveLead, updateLead } from '../lib/leadStorage';
+import { submitLeadToFormSubmit } from '../lib/formSubmit';
 import { computeLeadScore } from '../lib/pricing';
 import type { CelebrationSelections, Lead } from '../lib/types';
 import './BookConsultation.css';
@@ -88,7 +89,7 @@ export function BookConsultation() {
     setEnquirySubmitted(false);
   };
 
-  const onConfirmBooking = (e: FormEvent) => {
+  const onConfirmBooking = async (e: FormEvent) => {
     e.preventDefault();
     if (!consultationType || !date || !time || !contact.name || !contact.email || !contact.phone) {
       return;
@@ -102,17 +103,21 @@ export function BookConsultation() {
     };
 
     let id = leadId;
+    let leadForSubmit: Lead | null = null;
+
     if (id) {
       const existing = getLeadById(id);
       if (existing) {
         const { score, category } = computeLeadScore(existing.wedding, existing.estimate, true);
-        updateLead(id, {
+        const updated = updateLead(id, {
           status: 'consultation_booked',
           score,
           category,
           booking,
           contact: { ...existing.contact, ...contact },
+          notes: existing.notes || 'Source: Book a Consultation',
         });
+        leadForSubmit = updated;
       }
     } else {
       id = generateLeadId();
@@ -131,13 +136,18 @@ export function BookConsultation() {
       };
       saveLead(lead);
       setLeadId(id);
+      leadForSubmit = lead;
+    }
+
+    if (leadForSubmit) {
+      await submitLeadToFormSubmit(leadForSubmit);
     }
 
     saveBooking({ date, time, leadId: id || undefined });
     setConfirmed(true);
   };
 
-  const onSubmitEnquiry = (e: FormEvent) => {
+  const onSubmitEnquiry = async (e: FormEvent) => {
     e.preventDefault();
     const wedding: CelebrationSelections = {
       ...emptyWedding,
@@ -176,6 +186,7 @@ export function BookConsultation() {
     };
 
     saveLead(lead);
+    await submitLeadToFormSubmit(lead);
     updateContact({
       name: enquiry.name,
       partnerName: enquiry.partnerName,

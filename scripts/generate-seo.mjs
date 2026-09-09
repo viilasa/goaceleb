@@ -104,7 +104,7 @@ Goa Celebrations plans destination theme weddings, beach weddings, Haldi & Mehen
 ## Contact
 
 - Address: H.no. 367, Ashvem Beach, Mandrem, Goa
-- Email: info@goacelebrations.com · brian@goacelebrations.com
+- Email: briangoacelebrations@gmail.com
 - Phone: +91 75074 90443 · +91 97645 06868
 - WhatsApp: https://wa.me/917507490443
 
@@ -154,7 +154,7 @@ const llmsFull = `# Goa Celebrations — Full context for AI systems
 - Location: H.no. 367, Ashvem Beach, Mandrem, Goa, India
 - Website (canonical): ${SITE_URL}
 - Website (preview): ${PREVIEW_URL}
-- Email: info@goacelebrations.com · brian@goacelebrations.com
+- Email: briangoacelebrations@gmail.com
 - Phone: +91 75074 90443 · +91 97645 06868
 - WhatsApp: https://wa.me/917507490443
 - Claims: 10+ years experience; 1000+ events managed (as of May 2023 milestone)
