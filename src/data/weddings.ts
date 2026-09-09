@@ -94,6 +94,17 @@ export const weddings: WeddingStory[] = [
   },
   {
     id: '4',
+    slug: 'cliffside-vow-exchange',
+    name: 'Cliffside Vow Exchange',
+    location: 'South Goa',
+    days: 1,
+    guestCount: 60,
+    tags: ['Intimate', 'Beach'],
+    shortDescription: 'A one-day ceremony with cliff views and a sunset reception.',
+    introduction:
+      'For couples who want something quieter — one perfect day, carefully paced, with the ocean as witness.',
+    coverImage:
+      'https://images.unsplash.com/photo-1529636798458-92182e662925?w=1600&q=80',
     featured: false,
     featuredSize: 'small',
     details:
