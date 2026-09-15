@@ -33,7 +33,7 @@ export const SITE = {
     full: 'H.no. 367, Ashvem Beach, Mandrem, Goa',
   },
   social: {
-    instagram: 'https://www.instagram.com/',
+    instagram: 'https://www.instagram.com/goacelebrations/?hl=en',
     facebook: 'https://www.facebook.com/',
     youtube: 'https://www.youtube.com/',
     linkedin: 'https://www.linkedin.com/',

@@ -34,6 +34,9 @@ export function Footer() {
           <a href={SITE.whatsapp} target="_blank" rel="noreferrer">
             WhatsApp
           </a>
+          <a href={SITE.social.instagram} target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
         </div>
       </div>
 
