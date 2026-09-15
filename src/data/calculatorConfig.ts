@@ -88,11 +88,13 @@ export const DECOR_LEVELS: {
 export const ACCOMMODATION_OPTIONS = ['Yes', 'No', 'Not Sure'] as const;
 
 export const GUEST_EXPERIENCE_OPTIONS = [
-  'Airport transfers',
-  'Local transportation',
-  'Guest welcome desk',
-  'Hospitality team',
-  'Welcome hampers',
+  'RSVP',
+  "Welcome Hampers",
+  'Guest Management & Logistics Planning',
+  'On Arrival / Check-ins',
+  'F&B Coordination & Management',
+  'On the Day Management & Coordination',
+  'Departure / Check-outs',
 ];
 
 export const ENTERTAINMENT_OPTIONS = [
@@ -173,11 +175,13 @@ export const PRICING = {
   accommodationPerNight: { min: 1.5, max: 3.5 },
 
   guestExperienceAddOns: {
-    'Airport transfers': { min: 0.8, max: 2 },
-    'Local transportation': { min: 0.6, max: 1.5 },
-    'Guest welcome desk': { min: 0.4, max: 1 },
-    'Hospitality team': { min: 1.2, max: 3 },
-    'Welcome hampers': { min: 0.5, max: 1.2 },
+    RSVP: { min: 0.4, max: 1 },
+    'Welcome Hampers': { min: 0.5, max: 1.2 },
+    'Guest Management & Logistics Planning': { min: 1.2, max: 3 },
+    'On Arrival / Check-ins': { min: 0.8, max: 2 },
+    'F&B Coordination & Management': { min: 0.8, max: 2 },
+    'On the Day Management & Coordination': { min: 1.2, max: 3 },
+    'Departure / Check-outs': { min: 0.6, max: 1.5 },
   } as Record<string, { min: number; max: number }>,
 };
 

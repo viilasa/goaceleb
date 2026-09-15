@@ -368,7 +368,7 @@ export function BuildCelebration() {
               )}
 
               <fieldset className="build-fieldset">
-                <legend>Hospitality extras</legend>
+                <legend>Hospitality</legend>
                 <div className="selectable-grid cols-2">
                   {GUEST_EXPERIENCE_OPTIONS.map((opt) => (
                     <SelectableOption
