@@ -49,19 +49,15 @@ export const EVENT_OPTIONS = [
 ];
 
 export const VENUE_OPTIONS = [
-  'Beachfront',
-  'Luxury Resort',
+  '3 Star Hotel',
+  '5 Star Hotel',
   'Private Villa',
-  'Boutique Property',
-  'Outdoor Garden',
-  'Heritage Property',
-  'Not Sure Yet',
 ];
 
 export const DECOR_STYLES = [
   'Tropical Modern',
   'Minimal White',
-  'Romantic Floral',
+  'Need Consultant',
   'Colourful Indian',
   'Contemporary Luxury',
   'Bespoke / Something Else',
@@ -99,35 +95,30 @@ export const GUEST_EXPERIENCE_OPTIONS = [
   'Welcome hampers',
 ];
 
-export const PHOTOGRAPHY_OPTIONS = [
-  'Photography',
-  'Photography + Cinematic Film',
-  'Full Premium Production',
-];
-
 export const ENTERTAINMENT_OPTIONS = [
+  'Dhols',
+  'Ghodi',
+  'Brass Band',
+  'Band',
   'DJ',
-  'Live Band',
-  'Traditional Performers',
-  'Special Artist',
-  'Custom Entertainment',
-];
-
-export const FOOD_OPTIONS = [
-  'Venue Package',
-  'Curated Catering',
-  'Premium Dining Experience',
+  'One-wheel Stall',
+  'Vintage Cars',
+  'Mehendi & Makeup Artist',
+  'Belly Dancer',
+  'Singer',
+  'Magician',
+  'Emcee',
+  'Stand-up Comedian',
+  'Russian Dancer',
+  'Mixologist',
 ];
 
 export const EXPERIENCE_OPTIONS = [
-  'Welcome Hampers',
-  'Cocktail Experience',
-  'Fireworks / Special Effects',
-  'Custom Gifting',
-  'Guest Activities',
-  'After Party',
-  'Bridal Entry Experience',
-  'Custom Entertainment',
+  'Colour Shots',
+  'Flower Petals',
+  'Colours',
+  'Pyros',
+  'Laser Lights',
 ];
 
 /**
@@ -135,7 +126,7 @@ export const EXPERIENCE_OPTIONS = [
  * Ranges are planning estimates — not quotations.
  */
 export const PRICING = {
-  basePlanning: { min: 4, max: 8 },
+  basePlanning: { min: 2.5, max: 4 },
 
   guestMultiplier: {
     '50-100': { min: 1, max: 1.15 },
@@ -153,13 +144,9 @@ export const PRICING = {
   } as Record<DayCount, { min: number; max: number }>,
 
   venueBase: {
-    Beachfront: { min: 8, max: 18 },
-    'Luxury Resort': { min: 10, max: 22 },
-    'Private Villa': { min: 6, max: 14 },
-    'Boutique Property': { min: 5, max: 12 },
-    'Outdoor Garden': { min: 4, max: 10 },
-    'Heritage Property': { min: 7, max: 16 },
-    'Not Sure Yet': { min: 6, max: 15 },
+    '3 Star Hotel': { min: 40, max: 40 },
+    '5 Star Hotel': { min: 80, max: 80 },
+    'Private Villa': { min: 50, max: 70 },
   } as Record<string, { min: number; max: number }>,
 
   decorBase: { min: 5, max: 10 },
@@ -171,35 +158,16 @@ export const PRICING = {
 
   eventAddPerEvent: { min: 1.2, max: 2.5 },
 
-  foodPerGuestBand: {
-    'Venue Package': { min: 4, max: 8 },
-    'Curated Catering': { min: 7, max: 14 },
-    'Premium Dining Experience': { min: 12, max: 22 },
-  } as Record<string, { min: number; max: number }>,
+  photography: { min: 2.5, max: 3.5 },
 
-  photography: {
-    Photography: { min: 2.5, max: 4 },
-    'Photography + Cinematic Film': { min: 4.5, max: 8 },
-    'Full Premium Production': { min: 8, max: 15 },
-  } as Record<string, { min: number; max: number }>,
-
-  entertainment: {
-    DJ: { min: 0.8, max: 1.5 },
-    'Live Band': { min: 2, max: 4 },
-    'Traditional Performers': { min: 1.2, max: 2.5 },
-    'Special Artist': { min: 3, max: 8 },
-    'Custom Entertainment': { min: 2, max: 5 },
-  } as Record<string, { min: number; max: number }>,
+  entertainmentVendors: { min: 3, max: 5 },
 
   experiences: {
-    'Welcome Hampers': { min: 0.5, max: 1.2 },
-    'Cocktail Experience': { min: 1, max: 2.5 },
-    'Fireworks / Special Effects': { min: 1.5, max: 4 },
-    'Custom Gifting': { min: 0.8, max: 2 },
-    'Guest Activities': { min: 1, max: 3 },
-    'After Party': { min: 1.5, max: 3.5 },
-    'Bridal Entry Experience': { min: 0.8, max: 2 },
-    'Custom Entertainment': { min: 1.5, max: 4 },
+    'Colour Shots': { min: 0.8, max: 1.5 },
+    'Flower Petals': { min: 0.4, max: 1 },
+    Colours: { min: 0.5, max: 1.2 },
+    Pyros: { min: 1.5, max: 3 },
+    'Laser Lights': { min: 1, max: 2.5 },
   } as Record<string, { min: number; max: number }>,
 
   accommodationPerNight: { min: 1.5, max: 3.5 },

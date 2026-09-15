@@ -13,11 +13,9 @@ import {
   ENTERTAINMENT_OPTIONS,
   EVENT_OPTIONS,
   EXPERIENCE_OPTIONS,
-  FOOD_OPTIONS,
   GUEST_EXPERIENCE_OPTIONS,
   GUEST_OPTIONS,
   MONTHS,
-  PHOTOGRAPHY_OPTIONS,
   VENUE_OPTIONS,
   YEARS,
 } from '../data/calculatorConfig';
@@ -36,13 +34,13 @@ import type {
 import './BuildCelebration.css';
 
 const BREAKDOWN_LABELS: Record<string, string> = {
-  venue: 'Venue & Accommodation',
+  venue: 'Venue',
   decor: 'Décor & Design',
   food: 'Food & Beverage',
   planning: 'Planning & Management',
   photography: 'Photography & Film',
   hospitality: 'Hospitality & Logistics',
-  entertainment: 'Entertainment',
+  entertainment: 'Vendors & Artists',
 };
 
 export function BuildCelebration() {
@@ -85,7 +83,7 @@ export function BuildCelebration() {
       case 5:
         return !!selections.accommodation;
       case 6:
-        return !!(selections.photography && selections.foodAndBeverage);
+        return true;
       default:
         return true;
     }
@@ -391,21 +389,7 @@ export function BuildCelebration() {
               <h2 className="step-title">Add-ons</h2>
 
               <fieldset className="build-fieldset">
-                <legend>Photography</legend>
-                <div className="selectable-grid">
-                  {PHOTOGRAPHY_OPTIONS.map((opt) => (
-                    <SelectableOption
-                      key={opt}
-                      title={opt}
-                      selected={selections.photography === opt}
-                      onClick={() => updateSelections({ photography: opt })}
-                    />
-                  ))}
-                </div>
-              </fieldset>
-
-              <fieldset className="build-fieldset">
-                <legend>Entertainment</legend>
+                <legend>Vendors & Artists</legend>
                 <div className="selectable-grid cols-2">
                   {ENTERTAINMENT_OPTIONS.map((opt) => (
                     <SelectableOption
@@ -420,21 +404,7 @@ export function BuildCelebration() {
               </fieldset>
 
               <fieldset className="build-fieldset">
-                <legend>Food & Beverage</legend>
-                <div className="selectable-grid">
-                  {FOOD_OPTIONS.map((opt) => (
-                    <SelectableOption
-                      key={opt}
-                      title={opt}
-                      selected={selections.foodAndBeverage === opt}
-                      onClick={() => updateSelections({ foodAndBeverage: opt })}
-                    />
-                  ))}
-                </div>
-              </fieldset>
-
-              <fieldset className="build-fieldset">
-                <legend>Additional Experiences</legend>
+                <legend>SFX</legend>
                 <div className="selectable-grid cols-2">
                   {EXPERIENCE_OPTIONS.map((opt) => (
                     <SelectableOption

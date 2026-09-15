@@ -10,45 +10,27 @@ function round1(n: number): number {
   return Math.round(n * 10) / 10;
 }
 
-function defaultRange(): { min: number; max: number } {
-  return { min: 0, max: 0 };
-}
-
 export function calculateEstimate(s: CelebrationSelections): EstimateResult {
   const guestMul =
     (s.guestRange && PRICING.guestMultiplier[s.guestRange]) || { min: 1, max: 1.2 };
-  const dayMul =
-    (s.numberOfDays && PRICING.dayMultiplier[s.numberOfDays]) || { min: 1, max: 1.15 };
   const venue =
-    (s.venuePreference && PRICING.venueBase[s.venuePreference]) || PRICING.venueBase['Not Sure Yet'];
+    (s.venuePreference && PRICING.venueBase[s.venuePreference]) ||
+    PRICING.venueBase['3 Star Hotel'];
   const decorMul =
     (s.decorLevel && PRICING.decorMultiplier[s.decorLevel]) || { min: 1, max: 1.2 };
 
   const eventCount = Math.max(s.events.length, 1);
-  const eventMin = eventCount * PRICING.eventAddPerEvent.min;
-  const eventMax = eventCount * PRICING.eventAddPerEvent.max;
 
-  const venueMin = round1(venue.min * dayMul.min);
-  const venueMax = round1(venue.max * dayMul.max + eventMax * 0.3);
+  const venueMin = round1(venue.min);
+  const venueMax = round1(venue.max);
 
   const decorMin = round1(PRICING.decorBase.min * decorMul.min * Math.sqrt(eventCount));
   const decorMax = round1(PRICING.decorBase.max * decorMul.max * Math.sqrt(eventCount));
 
-  const foodBase =
-    (s.foodAndBeverage && PRICING.foodPerGuestBand[s.foodAndBeverage]) ||
-    PRICING.foodPerGuestBand['Curated Catering'];
-  const foodMin = round1(foodBase.min * guestMul.min * dayMul.min);
-  const foodMax = round1(foodBase.max * guestMul.max * dayMul.max);
+  const planningMin = round1(PRICING.basePlanning.min);
+  const planningMax = round1(PRICING.basePlanning.max);
 
-  const planningMin = round1(
-    PRICING.basePlanning.min * dayMul.min + eventMin * 0.4,
-  );
-  const planningMax = round1(
-    PRICING.basePlanning.max * dayMul.max + eventMax * 0.5,
-  );
-
-  const photo =
-    (s.photography && PRICING.photography[s.photography]) || defaultRange();
+  const photo = PRICING.photography;
 
   let hospitalityMin = 0;
   let hospitalityMax = 0;
@@ -67,27 +49,22 @@ export function calculateEstimate(s: CelebrationSelections): EstimateResult {
 
   let entertainmentMin = 0;
   let entertainmentMax = 0;
-  for (const item of s.entertainment) {
-    const range = PRICING.entertainment[item];
-    if (range) {
-      entertainmentMin += range.min;
-      entertainmentMax += range.max;
-    }
+  if (s.entertainment.length > 0) {
+    entertainmentMin += PRICING.entertainmentVendors.min;
+    entertainmentMax += PRICING.entertainmentVendors.max;
   }
   for (const item of s.experiences) {
     const range = PRICING.experiences[item];
     if (range) {
-      entertainmentMin += range.min * 0.5;
-      entertainmentMax += range.max * 0.5;
-      hospitalityMin += range.min * 0.5;
-      hospitalityMax += range.max * 0.5;
+      entertainmentMin += range.min;
+      entertainmentMax += range.max;
     }
   }
 
   const breakdown: EstimateBreakdown = {
     venue: { min: venueMin, max: venueMax },
     decor: { min: decorMin, max: decorMax },
-    food: { min: foodMin, max: foodMax },
+    food: { min: 0, max: 0 },
     planning: { min: planningMin, max: planningMax },
     photography: { min: round1(photo.min), max: round1(photo.max) },
     hospitality: { min: round1(hospitalityMin), max: round1(hospitalityMax) },

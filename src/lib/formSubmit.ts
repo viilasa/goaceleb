@@ -27,10 +27,8 @@ function formatWedding(lead: Lead): string {
     `Décor: ${[w.decorStyle, w.decorLevel].filter(Boolean).join(' / ') || '—'}`,
     `Accommodation: ${w.accommodation || '—'} (${w.accommodationNights || 0} nights)`,
     `Guest experience: ${w.guestExperience.length ? w.guestExperience.join(', ') : '—'}`,
-    `Photography: ${w.photography || '—'}`,
-    `Entertainment: ${w.entertainment.length ? w.entertainment.join(', ') : '—'}`,
-    `Food & beverage: ${w.foodAndBeverage || '—'}`,
-    `Experiences: ${w.experiences.length ? w.experiences.join(', ') : '—'}`,
+    `Vendors & artists: ${w.entertainment.length ? w.entertainment.join(', ') : '—'}`,
+    `SFX: ${w.experiences.length ? w.experiences.join(', ') : '—'}`,
     `Package preference: ${w.packagePreference || '—'}`,
   ].join('\n');
 }
