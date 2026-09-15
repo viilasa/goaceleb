@@ -80,8 +80,11 @@ export function Seo({
     );
     setMetaByName('googlebot', noindex ? 'noindex, nofollow' : 'index, follow');
     setMetaByName('author', SITE.name);
+    setMetaByName('google-site-verification', 'UFCftVQMZ0Hd95QELG5tz8Bd_q5sD_vMfhAy1rBmJNk');
     setMetaByName('geo.region', 'IN-GA');
-    setMetaByName('geo.placename', 'Goa');
+    setMetaByName('geo.placename', 'Mandrem, Goa');
+    setMetaByName('geo.position', '15.653,73.743');
+    setMetaByName('ICBM', '15.653, 73.743');
     setMetaByName('language', SITE.language);
 
     setLink('canonical', canonical);

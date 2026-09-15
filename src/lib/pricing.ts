@@ -10,22 +10,32 @@ function round1(n: number): number {
   return Math.round(n * 10) / 10;
 }
 
+function capRange(
+  range: { min: number; max: number },
+  cap: { min: number; max: number },
+): { min: number; max: number } {
+  const min = round1(Math.min(Math.max(range.min, cap.min), cap.max));
+  const max = round1(Math.min(Math.max(range.max, min), cap.max));
+  return { min, max };
+}
+
 export function calculateEstimate(s: CelebrationSelections): EstimateResult {
-  const guestMul =
-    (s.guestRange && PRICING.guestMultiplier[s.guestRange]) || { min: 1, max: 1.2 };
   const venue =
     (s.venuePreference && PRICING.venueBase[s.venuePreference]) ||
     PRICING.venueBase['3 Star Hotel'];
   const decorMul =
-    (s.decorLevel && PRICING.decorMultiplier[s.decorLevel]) || { min: 1, max: 1.2 };
-
-  const eventCount = Math.max(s.events.length, 1);
+    (s.decorLevel && PRICING.decorMultiplier[s.decorLevel]) || { min: 1, max: 1 };
 
   const venueMin = round1(venue.min);
   const venueMax = round1(venue.max);
 
-  const decorMin = round1(PRICING.decorBase.min * decorMul.min * Math.sqrt(eventCount));
-  const decorMax = round1(PRICING.decorBase.max * decorMul.max * Math.sqrt(eventCount));
+  const decor = capRange(
+    {
+      min: PRICING.decorBase.min * decorMul.min,
+      max: PRICING.decorBase.max * decorMul.max,
+    },
+    PRICING.caps.decor,
+  );
 
   const planningMin = round1(PRICING.basePlanning.min);
   const planningMax = round1(PRICING.basePlanning.max);
@@ -35,9 +45,9 @@ export function calculateEstimate(s: CelebrationSelections): EstimateResult {
   let hospitalityMin = 0;
   let hospitalityMax = 0;
   if (s.accommodation === 'Yes') {
-    const nights = Math.max(s.accommodationNights || 1, 1);
-    hospitalityMin += PRICING.accommodationPerNight.min * nights * guestMul.min;
-    hospitalityMax += PRICING.accommodationPerNight.max * nights * guestMul.max;
+    const nights = Math.min(Math.max(s.accommodationNights || 1, 1), 4);
+    hospitalityMin += PRICING.accommodationPerNight.min * Math.min(nights, 2) * 0.5;
+    hospitalityMax += PRICING.accommodationPerNight.max * Math.min(nights, 2) * 0.5;
   }
   for (const item of s.guestExperience) {
     const range = PRICING.guestExperienceAddOns[item];
@@ -46,6 +56,10 @@ export function calculateEstimate(s: CelebrationSelections): EstimateResult {
       hospitalityMax += range.max;
     }
   }
+  const hospitality = capRange(
+    { min: hospitalityMin, max: hospitalityMax },
+    PRICING.caps.hospitality,
+  );
 
   let entertainmentMin = 0;
   let entertainmentMax = 0;
@@ -60,15 +74,19 @@ export function calculateEstimate(s: CelebrationSelections): EstimateResult {
       entertainmentMax += range.max;
     }
   }
+  const entertainment = capRange(
+    { min: entertainmentMin, max: entertainmentMax },
+    PRICING.caps.entertainment,
+  );
 
   const breakdown: EstimateBreakdown = {
     venue: { min: venueMin, max: venueMax },
-    decor: { min: decorMin, max: decorMax },
+    decor: { min: round1(decor.min), max: round1(decor.max) },
     food: { min: 0, max: 0 },
     planning: { min: planningMin, max: planningMax },
     photography: { min: round1(photo.min), max: round1(photo.max) },
-    hospitality: { min: round1(hospitalityMin), max: round1(hospitalityMax) },
-    entertainment: { min: round1(entertainmentMin), max: round1(entertainmentMax) },
+    hospitality,
+    entertainment,
   };
 
   const minimum = round1(

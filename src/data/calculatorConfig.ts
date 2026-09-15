@@ -146,16 +146,16 @@ export const PRICING = {
   } as Record<DayCount, { min: number; max: number }>,
 
   venueBase: {
-    '3 Star Hotel': { min: 40, max: 40 },
-    '5 Star Hotel': { min: 80, max: 80 },
-    'Private Villa': { min: 50, max: 70 },
+    '3 Star Hotel': { min: 35, max: 40 },
+    '5 Star Hotel': { min: 70, max: 80 },
+    'Private Villa': { min: 45, max: 55 },
   } as Record<string, { min: number; max: number }>,
 
-  decorBase: { min: 5, max: 10 },
+  decorBase: { min: 4, max: 6 },
   decorMultiplier: {
-    essential: { min: 1, max: 1.2 },
-    signature: { min: 1.5, max: 2 },
-    immersive: { min: 2.2, max: 3.2 },
+    essential: { min: 1, max: 1 },
+    signature: { min: 1.25, max: 1.35 },
+    immersive: { min: 1.6, max: 1.7 },
   } as Record<DecorLevel, { min: number; max: number }>,
 
   eventAddPerEvent: { min: 1.2, max: 2.5 },
@@ -165,24 +165,30 @@ export const PRICING = {
   entertainmentVendors: { min: 3, max: 5 },
 
   experiences: {
-    'Colour Shots': { min: 0.8, max: 1.5 },
-    'Flower Petals': { min: 0.4, max: 1 },
-    Colours: { min: 0.5, max: 1.2 },
-    Pyros: { min: 1.5, max: 3 },
-    'Laser Lights': { min: 1, max: 2.5 },
+    'Colour Shots': { min: 0.4, max: 0.7 },
+    'Flower Petals': { min: 0.3, max: 0.5 },
+    Colours: { min: 0.3, max: 0.5 },
+    Pyros: { min: 0.6, max: 1 },
+    'Laser Lights': { min: 0.5, max: 0.8 },
   } as Record<string, { min: number; max: number }>,
 
-  accommodationPerNight: { min: 1.5, max: 3.5 },
+  accommodationPerNight: { min: 1.5, max: 3 },
 
   guestExperienceAddOns: {
-    RSVP: { min: 0.4, max: 1 },
-    'Welcome Hampers': { min: 0.5, max: 1.2 },
-    'Guest Management & Logistics Planning': { min: 1.2, max: 3 },
-    'On Arrival / Check-ins': { min: 0.8, max: 2 },
-    'F&B Coordination & Management': { min: 0.8, max: 2 },
-    'On the Day Management & Coordination': { min: 1.2, max: 3 },
-    'Departure / Check-outs': { min: 0.6, max: 1.5 },
+    RSVP: { min: 0.3, max: 0.5 },
+    'Welcome Hampers': { min: 0.4, max: 0.7 },
+    'Guest Management & Logistics Planning': { min: 0.6, max: 1 },
+    'On Arrival / Check-ins': { min: 0.4, max: 0.7 },
+    'F&B Coordination & Management': { min: 0.4, max: 0.7 },
+    'On the Day Management & Coordination': { min: 0.6, max: 1 },
+    'Departure / Check-outs': { min: 0.3, max: 0.5 },
   } as Record<string, { min: number; max: number }>,
+
+  caps: {
+    decor: { min: 4, max: 10 },
+    hospitality: { min: 0, max: 8 },
+    entertainment: { min: 0, max: 5 },
+  },
 };
 
 export const LEAD_SCORE_CONFIG = {
