@@ -31,6 +31,7 @@
   --container-wide: min(1280px, calc(100% - (var(--page-gutter) * 2)));
   --container-narrow: min(720px, calc(100% - (var(--page-gutter) * 2)));
   --sticky-cta-height: 4.75rem;
+  --build-nav-height: 4.75rem;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --duration: 0.45s;
@@ -48,6 +49,17 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   overflow-x: clip;
+}
+
+html.is-app-flow,
+html.is-app-flow body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+html.is-app-flow #root {
+  height: 100%;
 }
 
 body {

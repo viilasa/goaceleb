@@ -7,80 +7,200 @@
   font-size: clamp(2rem, 7vw, 3.75rem);
 }
 
-/* ——— Mobile app chrome ——— */
-.build-app-bar {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  display: grid;
-  grid-template-columns: 2.75rem 1fr auto;
-  align-items: center;
-  gap: 0.75rem;
-  min-height: 3.5rem;
-  padding: 0.65rem 1rem;
-  padding-top: calc(0.65rem + env(safe-area-inset-top));
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--color-border);
-}
+/* ——— Mobile / iPhone app shell ——— */
+@media (max-width: 1023px) {
+  .build-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+  }
 
-.build-app-close {
-  display: grid;
-  place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 1px solid var(--color-border);
-}
+  .build-app-bar {
+    position: relative;
+    flex: 0 0 auto;
+    z-index: 40;
+    display: grid;
+    grid-template-columns: 2.75rem minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.65rem;
+    min-height: 3.25rem;
+    padding: 0.5rem 0.9rem;
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+    padding-left: max(0.9rem, env(safe-area-inset-left));
+    padding-right: max(0.9rem, env(safe-area-inset-right));
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--color-border);
+  }
 
-.build-app-kicker {
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--color-text-soft);
-  font-weight: 500;
-}
+  .build-app-close {
+    display: grid;
+    place-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    min-width: 44px;
+    min-height: 44px;
+    border: 1px solid var(--color-border);
+  }
 
-.build-app-title {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 500;
-  line-height: 1.15;
-  margin: 0.1rem 0 0;
-}
+  .build-app-bar-copy {
+    min-width: 0;
+  }
 
-.build-app-step {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  color: var(--color-accent);
-  min-width: 2.5rem;
-  text-align: right;
-}
+  .build-app-kicker {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-soft);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-.build-shell {
-  display: flex;
-  flex-direction: column;
-  max-width: 760px;
-  min-height: calc(100dvh - 3.5rem - env(safe-area-inset-top));
-  padding-inline: 0;
-  width: min(760px, 100%);
-  margin-inline: auto;
-}
+  .build-app-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.15rem, 5.4vw, 1.4rem);
+    font-weight: 500;
+    line-height: 1.15;
+    margin: 0.1rem 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
-.build-app-progress {
-  padding: 0.85rem 1rem 0;
-}
+  .build-app-step {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    min-width: 2.25rem;
+    text-align: right;
+    flex-shrink: 0;
+  }
 
-.build-scroll {
-  flex: 1;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  padding: 0.75rem 1rem 7.5rem;
-  overscroll-behavior: contain;
+  .build-shell {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .build-app-progress {
+    flex: 0 0 auto;
+    padding: 0.7rem 1rem 0.15rem;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  .build-app-progress .progress-steps {
+    margin-bottom: 0.35rem;
+  }
+
+  .build-scroll {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    padding: 0.65rem 1rem;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: calc(var(--build-nav-height) + env(safe-area-inset-bottom) + 1rem);
+  }
+
+  .build-nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0.7rem 1rem;
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+    padding-bottom: max(0.7rem, env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .build-nav-back {
+    flex: 0 0 auto;
+    min-width: 4.25rem;
+    min-height: 48px;
+    padding-inline: 0.7rem;
+  }
+
+  .build-nav-continue,
+  .build-nav .btn-primary {
+    flex: 1 1 auto;
+    max-width: none;
+    margin-left: 0;
+    min-height: 48px;
+    font-size: 0.95rem;
+  }
+
+  .build-page .selectable-grid,
+  .build-page .selectable-grid.cols-2,
+  .build-page .selectable-grid.cols-3 {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+
+  .build-page .field-row {
+    grid-template-columns: 1fr;
+  }
+
+  .build-page .estimate-value {
+    font-size: clamp(1.7rem, 9vw, 2.4rem);
+    word-break: break-word;
+  }
+
+  .build-page .breakdown-row {
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .build-page .breakdown-row span:last-child {
+    white-space: normal;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .build-page .btn-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .build-page .btn-group .btn {
+    width: 100%;
+  }
 }
 
 .build-panel {
   animation: stepIn 0.4s var(--ease);
+  max-width: 100%;
 }
 
 @keyframes stepIn {
@@ -113,6 +233,7 @@
 .build-fieldset {
   border: none;
   margin-bottom: var(--space-6);
+  min-width: 0;
 }
 
 .build-fieldset legend {
@@ -127,41 +248,6 @@
   font-size: 0.85rem;
   color: var(--color-text-muted);
   line-height: 1.5;
-}
-
-/* Fixed bottom action bar — app style */
-.build-nav {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
-  background: rgba(255, 255, 255, 0.96);
-  backdrop-filter: blur(16px);
-  border-top: 1px solid var(--color-border);
-  max-width: 760px;
-  margin-inline: auto;
-  width: 100%;
-}
-
-.build-nav-back {
-  flex: 0 0 auto;
-  min-width: 4.5rem;
-  min-height: 52px;
-  padding-inline: 0.75rem;
-}
-
-.build-nav-continue,
-.build-nav .btn-primary {
-  flex: 1;
-  max-width: none;
-  margin-left: 0;
-  min-height: 52px;
-  font-size: 0.95rem;
 }
 
 .estimate-summary {
@@ -238,17 +324,38 @@
 .build-page .field select,
 .build-page .field textarea {
   font-size: 16px;
-  min-height: 52px;
+  min-height: 48px;
 }
 
 .build-page .selectable {
-  min-height: 58px;
-  padding: 1rem 0.95rem;
+  min-height: 52px;
+  padding: 0.95rem 0.9rem;
   border-radius: 0;
 }
 
-/* ——— Desktop ——— */
-@media (min-width: 768px) {
+.build-page .selectable-body {
+  min-width: 0;
+}
+
+.build-page .selectable-title {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Compact iPhones (SE / mini) */
+@media (max-width: 390px) {
+  .build-app-title {
+    font-size: 1.15rem;
+  }
+
+  .build-page .selectable {
+    min-height: 48px;
+    padding: 0.85rem 0.8rem;
+  }
+}
+
+/* ——— Desktop / large tablets ——— */
+@media (min-width: 1024px) {
   .build-app-bar {
     display: none;
   }
@@ -262,6 +369,8 @@
     min-height: auto;
     padding-bottom: calc(var(--space-8) + env(safe-area-inset-bottom));
     width: var(--container);
+    max-width: 760px;
+    margin-inline: auto;
   }
 
   .build-app-progress {
@@ -284,6 +393,9 @@
     max-width: none;
     margin-top: var(--space-7);
     padding: var(--space-5) 0 calc(0.85rem + env(safe-area-inset-bottom));
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
   }
 
   .build-nav-continue,

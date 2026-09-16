@@ -64,9 +64,17 @@
   .has-mobile-tabs {
     padding-bottom: calc(4.25rem + env(safe-area-inset-bottom));
   }
+}
+
+@media (max-width: 1023px) {
+  body.is-app-flow {
+    overflow: hidden;
+    height: 100%;
+    overscroll-behavior: none;
+  }
 
   body.is-app-flow .mobile-tab-bar {
-    display: none;
+    display: none !important;
   }
 
   body.is-app-flow .site-header,
@@ -76,6 +84,14 @@
 
   body.is-app-flow .page {
     padding-top: 0;
-    min-height: 100dvh;
+    min-height: 0;
+  }
+
+  .app-flow-main {
+    height: 100svh;
+    height: 100dvh;
+    max-height: 100svh;
+    max-height: 100dvh;
+    overflow: hidden;
   }
 }

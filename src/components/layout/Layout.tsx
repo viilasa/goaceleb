@@ -15,7 +15,11 @@ export function Layout() {
 
   useEffect(() => {
     document.body.classList.toggle('is-app-flow', isAppFlow);
-    return () => document.body.classList.remove('is-app-flow');
+    document.documentElement.classList.toggle('is-app-flow', isAppFlow);
+    return () => {
+      document.body.classList.remove('is-app-flow');
+      document.documentElement.classList.remove('is-app-flow');
+    };
   }, [isAppFlow]);
 
   return (
