@@ -30,7 +30,7 @@ export const services: Service[] = [
     description:
       'Culturally rich Haldi and Mehendi experiences with elegant setups, quality styling, personalised service and seamless integration into your multi-day Goa wedding.',
     image:
-      'https://www.marriagecolours.com/wp-content/uploads/2025/10/Sravaani-Sharan-Haldi-House-May-25-7.jpg',
+      'https://varshapateldesign.com/cdn/shop/articles/brides-family-haldi-ceremony.png?v=1781277611',
   },
   {
     id: '4',
