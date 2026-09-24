@@ -80,7 +80,7 @@ export const services: Service[] = [
     description:
       'Creative décor for stages, entrances, baraat moments, food spaces, bride entrances and full ceremony styling — designed to feel cohesive across every event in your celebration.',
     image:
-      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1400&q=80',
+      'https://www.brides.com/thmb/lEnohCrLbxybMe_0UAMKXP3Uvcs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fb-d6c0cdeffc4b4bed87aa749bec8407e4.jpg',
   },
 ];
 
