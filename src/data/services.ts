@@ -10,7 +10,7 @@ export const services: Service[] = [
     description:
       'End-to-end destination wedding planning — venue shortlists, scenic locations, creative décor, coordination and a calm, stress-free process from the first conversation to the final celebration.',
     image:
-      'https://media.licdn.com/dms/image/v2/D5612AQE9WwsM5wtxcg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1727953754417?e=2147483647&v=beta&t=YgPsxlo7ipMXXnRf4Bxf8D-CGNYbILh6L-D0i6ZOFs4',
+      'https://f5blog.co.uk/wp-content/uploads/2025/03/indian-wedding-photographs-0010.jpg',
   },
   {
     id: '2',
@@ -30,7 +30,7 @@ export const services: Service[] = [
     description:
       'Culturally rich Haldi and Mehendi experiences with elegant setups, quality styling, personalised service and seamless integration into your multi-day Goa wedding.',
     image:
-      'https://cdn0.weddingwire.in/vendor/9358/3_2/640/jpg/ra-highlights-jan2024-blurstories-56_15_439358-176889642475035.jpeg',
+      'https://www.marriagecolours.com/wp-content/uploads/2025/10/Sravaani-Sharan-Haldi-House-May-25-7.jpg',
   },
   {
     id: '4',
