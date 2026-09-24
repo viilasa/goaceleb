@@ -10,7 +10,7 @@ export const services: Service[] = [
     description:
       'End-to-end destination wedding planning — venue shortlists, scenic locations, creative décor, coordination and a calm, stress-free process from the first conversation to the final celebration.',
     image:
-      'https://images.unsplash.com/photo-1519741497674-611481863552?w=1400&q=80',
+      'https://media.licdn.com/dms/image/v2/D5612AQE9WwsM5wtxcg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1727953754417?e=2147483647&v=beta&t=YgPsxlo7ipMXXnRf4Bxf8D-CGNYbILh6L-D0i6ZOFs4',
   },
   {
     id: '2',
