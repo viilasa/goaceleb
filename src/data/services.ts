@@ -30,7 +30,7 @@ export const services: Service[] = [
     description:
       'Culturally rich Haldi and Mehendi experiences with elegant setups, quality styling, personalised service and seamless integration into your multi-day Goa wedding.',
     image:
-      'https://res.cloudinary.com/ddhhlkyut/image/upload/v1788956351/5U2A7548_f2ebho.jpg',
+      'https://cdn0.weddingwire.in/vendor/9358/3_2/640/jpg/ra-highlights-jan2024-blurstories-56_15_439358-176889642475035.jpeg',
   },
   {
     id: '4',
