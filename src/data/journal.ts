@@ -30,7 +30,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-11-12',
     readTime: '8 min',
     coverImage:
-      'https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=1400&q=80',
+      'https://www.seaqueenbeachresort.com/website/assets/images/wedding/section3-image.jpg',
     content: [
       'There is no single fixed price for a Goa destination wedding. Cost varies with guest count, number of events, venue type and how immersive you want décor and experiences to be.',
       'Venue and accommodation often form the foundation of the budget. Beachfront resorts, private villas and heritage properties each come with different structures and capacities.',
@@ -67,7 +67,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-09-28',
     readTime: '6 min',
     coverImage:
-      'https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1400&q=80',
+      'https://www.brides.com/thmb/lEnohCrLbxybMe_0UAMKXP3Uvcs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/fb-d6c0cdeffc4b4bed87aa749bec8407e4.jpg',
     content: [
       'Beach and destination settings favour palettes that feel natural in daylight — ivory, sand, soft blush and greens that echo the landscape.',
       'Sunset tones — coral, amber, deep terracotta — work especially well for evening Sangeet and reception moments.',
@@ -85,7 +85,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-09-10',
     readTime: '7 min',
     coverImage:
-      'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=1400&q=80',
+      'https://www.thetamarindtree.in/wp-content/uploads/2024/05/Vivekkrishnanphotography-561.jpg',
     content: [
       'Destination weddings involve more moving parts than a hometown celebration — venues, travel, permissions and guest care across several days.',
       'A local planner knows which resorts suit which guest counts, how beach ceremonies work in practice, and which vendors deliver consistently.',
@@ -121,7 +121,7 @@ export const journalArticles: JournalArticle[] = [
     date: '2025-08-05',
     readTime: '6 min',
     coverImage:
-      'https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?w=1400&q=80',
+      'https://www.hyderabadtourstravelss.com/img/blog-detail/best-weater-goa.webp',
     content: [
       'Goa’s peak wedding season typically runs from November through February, when skies are clear and evenings are comfortable outdoors.',
       'Shoulder months can offer softer light, fewer crowds and more venue flexibility — with careful planning around weather.',
